@@ -4,7 +4,6 @@ import {
     itransition,
     npm,
     bootstrap,
-    web,
     github,
     css,
     git,
@@ -34,13 +33,6 @@ export const navLinks = [
         title: "Contact",
     },
 ]
-
-const services = [
-    {
-        title: "Web Developer",
-        icon: web,
-    },
-];
 
 const technologies = [
     {
@@ -102,7 +94,7 @@ const experiences = [
         title: "React.js Developer",
         company_name: "Itransition",
         icon: itransition,
-        iconBg: "#383E56",
+        iconBg: "#ffffff",
         date: "Jan 2023 - Feb 2023",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
@@ -136,4 +128,4 @@ const projects = [
     },
 ]
 
-export { technologies, services, experiences, projects }
+export { technologies, experiences, projects }
