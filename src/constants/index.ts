@@ -13,6 +13,7 @@ import {
     reactjs,
     tailwind,
     typescript,
+    colorFlipper,
 } from "../assets"
 
 export const navLinks = [
@@ -106,25 +107,26 @@ const experiences = [
 
 const projects = [
     {
-        name: "Car Rent",
+        name: "Color Flipper",
+        deploy: "https://abdurauf1.github.io/color-flipper/",
         description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+            "Website that you can change colors randomly and, simple colors and hex colors.",
         tags: [
             {
-                name: "react",
-                color: "blue-text-gradient",
+                name: "html",
+                color: "pink-text-gradient",
             },
             {
-                name: "mongodb",
+                name: "css",
                 color: "green-text-gradient",
             },
             {
-                name: "tailwind",
-                color: "pink-text-gradient",
+                name: "javascript",
+                color: "blue-text-gradient",
             },
         ],
-        image: "",
-        source_code_link: "https://github.com/",
+        image: colorFlipper,
+        source_code_link: "https://github.com/Abdurauf1/color-flipper",
     },
 ]
 

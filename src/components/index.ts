@@ -3,5 +3,6 @@ import Hero from "./Hero"
 import CanvasLoader from "./Loader"
 import About from "./About"
 import Experience from "./Experience"
+import Projects from "./Projects"
 
-export { Navbar, Hero, CanvasLoader, About, Experience }
+export { Navbar, Hero, CanvasLoader, About, Experience, Projects }

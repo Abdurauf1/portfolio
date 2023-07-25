@@ -14,8 +14,10 @@ import sass from "./images/skills/sass.png";
 import tailwind from "./images/skills/tailwind.png";
 import typescript from "./images/skills/typescript.png";
 import itransition from "./images/company/itransition.png"
+import colorFlipper from "./images/color_flipper.png"
 
 export {
+  colorFlipper,
   mysql,
   sass,
   npm,
