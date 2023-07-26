@@ -1,4 +1,5 @@
-import { About, Hero, Navbar, Experience, Projects } from "./components";
+import { About, Hero, Navbar, Experience, Projects, Contact } from "./components";
+import { StarsCanvas } from "./components/canvas";
 
 function App() {
   return (
@@ -11,6 +12,10 @@ function App() {
         <About />
         <Experience />
         <Projects />
+        <div className="relative z-0">
+          <Contact />
+          <StarsCanvas />
+        </div>
       </div>
     </>
   );
