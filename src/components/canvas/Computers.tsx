@@ -11,7 +11,7 @@ const Computers = ({ isMobile }: Props) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
   return (
-    <mesh className="xl:mt-20">
+    <mesh>
       <hemisphereLight intensity={0.15} groundColor="black" />
       <pointLight intensity={1} />
       <spotLight
