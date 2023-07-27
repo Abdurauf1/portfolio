@@ -133,7 +133,7 @@ const projects = [
         name: "CV RS School",
         deploy: "https://abdurauf1.github.io/rsschool-cv/",
         description:
-            "Website about myself and my skills. Used html, scss and typescript. This is task from RS School",
+            "Website about myself and my skills. Used html, scss and typescript. This is task from RS School.",
         tags: [
             {
                 name: "html",
