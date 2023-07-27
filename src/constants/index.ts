@@ -14,6 +14,7 @@ import {
     tailwind,
     typescript,
     colorFlipper,
+    portfolioRS
 } from "../assets"
 
 export const navLinks = [
@@ -127,6 +128,28 @@ const projects = [
         ],
         image: colorFlipper,
         source_code_link: "https://github.com/Abdurauf1/color-flipper",
+    },
+    {
+        name: "CV RS School",
+        deploy: "https://abdurauf1.github.io/rsschool-cv/",
+        description:
+            "Website about myself and my skills. Used html, scss and typescript. This is task from RS School",
+        tags: [
+            {
+                name: "html",
+                color: "green-text-gradient",
+            },
+            {
+                name: "scss",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "typescript",
+                color: "blue-text-gradient",
+            },
+        ],
+        image: portfolioRS,
+        source_code_link: "https://github.com/Abdurauf1/rsschool-cv",
     },
 ]
 

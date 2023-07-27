@@ -15,6 +15,7 @@ import tailwind from "./images/skills/tailwind.png";
 import typescript from "./images/skills/typescript.png";
 import itransition from "./images/company/itransition.png"
 import colorFlipper from "./images/color_flipper.png"
+import portfolioRS from "./images/portfolio_rs.png"
 
 export {
   colorFlipper,
@@ -34,4 +35,5 @@ export {
   reactjs,
   tailwind,
   typescript,
+  portfolioRS
 };
