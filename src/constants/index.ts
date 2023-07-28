@@ -14,7 +14,8 @@ import {
     tailwind,
     typescript,
     colorFlipper,
-    portfolioRS
+    portfolioRS,
+    todoApp
 } from "../assets"
 
 export const navLinks = [
@@ -150,6 +151,28 @@ const projects = [
         ],
         image: portfolioRS,
         source_code_link: "https://github.com/Abdurauf1/rsschool-cv",
+    },
+    {
+        name: "Todo App",
+        deploy: "https://todo-app-abdurauf1.netlify.app/",
+        description:
+            "Web App created with react and typescript. It lets you add task to list, remove and edit it.",
+        tags: [
+            {
+                name: "react",
+                color: "green-text-gradient",
+            },
+            {
+                name: "tailwind",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "typescript",
+                color: "blue-text-gradient",
+            },
+        ],
+        image: todoApp,
+        source_code_link: "https://github.com/Abdurauf1/todo-app",
     },
 ]
 
