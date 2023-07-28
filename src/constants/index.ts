@@ -15,7 +15,8 @@ import {
     typescript,
     colorFlipper,
     portfolioRS,
-    todoApp
+    todoApp,
+    lumiaClone
 } from "../assets"
 
 export const navLinks = [
@@ -173,6 +174,28 @@ const projects = [
         ],
         image: todoApp,
         source_code_link: "https://github.com/Abdurauf1/todo-app",
+    },
+    {
+        name: "Lumia website clone",
+        deploy: "https://abdurauf1.github.io/lumia-clone/",
+        description:
+            "Lumia landing page clone with html, css, bootstrap and typescript",
+        tags: [
+            {
+                name: "html",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "css",
+                color: "green-text-gradient",
+            },
+            {
+                name: "typescript",
+                color: "blue-text-gradient",
+            },
+        ],
+        image: lumiaClone,
+        source_code_link: "https://github.com/Abdurauf1/lumia-clone",
     },
 ]
 
