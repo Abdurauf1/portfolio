@@ -18,8 +18,12 @@ import colorFlipper from "./images/projects/color_flipper.png"
 import portfolioRS from "./images/projects/portfolio_rs.png"
 import todoApp from "./images/projects/todo_app.png"
 import lumiaClone from "./images/projects/lumia_website.png"
+import registerLogin from "./images/projects/register_login.png"
+import Library from "./images/projects/library.png"
 
 export {
+  Library,
+  registerLogin,
   lumiaClone,
   todoApp,
   colorFlipper,

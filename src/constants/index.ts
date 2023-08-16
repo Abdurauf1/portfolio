@@ -16,7 +16,9 @@ import {
     colorFlipper,
     portfolioRS,
     todoApp,
-    lumiaClone
+    lumiaClone,
+    registerLogin,
+    Library
 } from "../assets"
 
 export const navLinks = [
@@ -164,7 +166,7 @@ const projects = [
                 color: "green-text-gradient",
             },
             {
-                name: "tailwind",
+                name: "less",
                 color: "pink-text-gradient",
             },
             {
@@ -196,6 +198,54 @@ const projects = [
         ],
         image: lumiaClone,
         source_code_link: "https://github.com/Abdurauf1/lumia-clone",
+    },
+    {
+        name: "Registration login webapp",
+        deploy: "https://registration-login-abdurauf1.netlify.app",
+        description:
+            "Registration login fullstack webapp. You can see, delete and block registered users",
+        tags: [
+            {
+                name: "react",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "bootstrap",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "nodejs",
+                color: "green-text-gradient",
+            },
+            {
+                name: "mongodb",
+                color: "blue-text-gradient",
+            },
+        ],
+        image: registerLogin,
+        source_code_link: "https://github.com/Abdurauf1/registration-login",
+    },
+    {
+        name: "Brooklyn Public Library",
+        deploy: "https://rolling-scopes-school.github.io/abdurauf1-JSFEPRESCHOOL2023Q2/library/",
+        description:
+            "Landing page about brooklyn public library",
+        tags: [
+            {
+                name: "html",
+                color: "green-text-gradient",
+            },
+            {
+                name: "scss",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "javascript",
+                color: "blue-text-gradient",
+            },
+        ],
+        image: Library,
+        source_code_link: "https://github.com/Abdurauf1/registration-login",
     },
 ]
 
