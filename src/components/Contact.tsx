@@ -3,12 +3,7 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { EarthCanvas } from "./canvas";
 import { styles } from "../styles";
-import {
-  ChangeEvent,
-  SyntheticEvent,
-  useRef,
-  useState,
-} from "react";
+import { ChangeEvent, SyntheticEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -75,6 +70,7 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What's your name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              required
             />
           </label>
           <label className="flex flex-col">
@@ -86,6 +82,7 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What's your email?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              required
             />
           </label>
           <label className="flex flex-col">
@@ -97,6 +94,7 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What do you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              required
             />
           </label>
 
