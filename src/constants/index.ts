@@ -200,10 +200,10 @@ const projects = [
         source_code_link: "https://github.com/Abdurauf1/lumia-clone",
     },
     {
-        name: "Registration login webapp",
+        name: "User management webapp",
         deploy: "https://registration-login-abdurauf1.netlify.app",
         description:
-            "Registration login fullstack webapp. You can see, delete and block registered users",
+            "User management fullstack webapp. You can see, delete and block registered users",
         tags: [
             {
                 name: "react",
