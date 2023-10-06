@@ -144,7 +144,7 @@ const projects = [
                 color: "green-text-gradient",
             },
             {
-                name: "scss",
+                name: "sass",
                 color: "pink-text-gradient",
             },
             {
@@ -192,6 +192,10 @@ const projects = [
                 color: "green-text-gradient",
             },
             {
+                name: "bootstrap",
+                color: "pink-text-gradient",
+            },
+            {
                 name: "typescript",
                 color: "blue-text-gradient",
             },
@@ -201,7 +205,7 @@ const projects = [
     },
     {
         name: "User management webapp",
-        deploy: "https://registration-login-abdurauf1.netlify.app",
+        deploy: "https://user-management-abdurauf1.netlify.app",
         description:
             "User management fullstack webapp. You can see, delete and block registered users",
         tags: [
@@ -210,7 +214,7 @@ const projects = [
                 color: "pink-text-gradient",
             },
             {
-                name: "bootstrap",
+                name: "react-bootstrap",
                 color: "blue-text-gradient",
             },
             {
@@ -245,7 +249,7 @@ const projects = [
             },
         ],
         image: Library,
-        source_code_link: "https://github.com/Abdurauf1/registration-login",
+        source_code_link: "#",
     },
 ]
 
