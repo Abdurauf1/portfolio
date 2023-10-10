@@ -166,6 +166,10 @@ const projects = [
                 color: "green-text-gradient",
             },
             {
+                name: "redux",
+                color: "blue-text-gradient",
+            },
+            {
                 name: "less",
                 color: "pink-text-gradient",
             },
