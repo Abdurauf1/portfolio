@@ -112,50 +112,6 @@ const experiences = [
 
 const projects = [
     {
-        name: "Color Flipper",
-        deploy: "https://abdurauf1.github.io/color-flipper/",
-        description:
-            "Website that you can change colors randomly and, simple colors and hex colors.",
-        tags: [
-            {
-                name: "html",
-                color: "pink-text-gradient",
-            },
-            {
-                name: "css",
-                color: "green-text-gradient",
-            },
-            {
-                name: "javascript",
-                color: "blue-text-gradient",
-            },
-        ],
-        image: colorFlipper,
-        source_code_link: "https://github.com/Abdurauf1/color-flipper",
-    },
-    {
-        name: "CV RS School",
-        deploy: "https://abdurauf1.github.io/rsschool-cv/",
-        description:
-            "Website about myself and my skills. Used html, scss and typescript. This is task from RS School.",
-        tags: [
-            {
-                name: "html",
-                color: "green-text-gradient",
-            },
-            {
-                name: "sass",
-                color: "pink-text-gradient",
-            },
-            {
-                name: "typescript",
-                color: "blue-text-gradient",
-            },
-        ],
-        image: portfolioRS,
-        source_code_link: "https://github.com/Abdurauf1/rsschool-cv",
-    },
-    {
         name: "Todo App",
         deploy: "https://todo-app-abdurauf1.netlify.app/",
         description:
@@ -180,6 +136,50 @@ const projects = [
         ],
         image: todoApp,
         source_code_link: "https://github.com/Abdurauf1/todo-app",
+    },
+    {
+        name: "CV RS School",
+        deploy: "https://abdurauf1.github.io/rsschool-cv/",
+        description:
+            "Website about myself and my skills. Used html, scss and typescript. This is task from RS School.",
+        tags: [
+            {
+                name: "html",
+                color: "green-text-gradient",
+            },
+            {
+                name: "sass",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "typescript",
+                color: "blue-text-gradient",
+            },
+        ],
+        image: portfolioRS,
+        source_code_link: "https://github.com/Abdurauf1/rsschool-cv",
+    },
+    {
+        name: "Color Flipper",
+        deploy: "https://abdurauf1.github.io/color-flipper/",
+        description:
+            "Website that you can change colors randomly and, simple colors and hex colors.",
+        tags: [
+            {
+                name: "html",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "css",
+                color: "green-text-gradient",
+            },
+            {
+                name: "javascript",
+                color: "blue-text-gradient",
+            },
+        ],
+        image: colorFlipper,
+        source_code_link: "https://github.com/Abdurauf1/color-flipper",
     },
     {
         name: "Lumia website clone",
