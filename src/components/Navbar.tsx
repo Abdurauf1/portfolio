@@ -7,6 +7,13 @@ const Navbar = () => {
   const [active, setActive] = useState<string>("");
   const [toggle, setToggle] = useState<boolean>(false);
 
+  document.addEventListener("click", (e: any) => {
+    const nav = document.querySelector("nav") as HTMLElement;
+    if (!nav.contains(e.target)) {
+      setToggle(!toggle)
+    }
+  });
+
   return (
     <nav className={`${styles.paddingX} w-full flex items-center py-7 fixed top-0 z-20 bg-primary`}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
