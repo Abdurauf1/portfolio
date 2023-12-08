@@ -11,7 +11,7 @@ const Navbar = () => {
     document.addEventListener("click", (e: any) => {
       const nav = document.querySelector("nav") as HTMLElement;
       if (!nav.contains(e.target)) {
-        setToggle(!toggle);
+        setToggle(false);
       }
     });
   }, []);

@@ -16,6 +16,11 @@ type Props = {
   deploy: string;
 };
 
+type TagProps = {
+  name: string;
+  color: string;
+};
+
 const ProjectCard = ({
   index,
   image,
@@ -54,7 +59,7 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag: any) => (
+          {tags.map((tag: TagProps) => (
             <p key={tag.name} className={`text-[14px] ${tag.color}`}>
               #{tag.name}
             </p>
