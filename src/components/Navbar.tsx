@@ -1,5 +1,5 @@
 import { navLinks } from "../constants";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { styles } from "../styles";
 import { menu, close } from "../assets";
 
@@ -7,12 +7,14 @@ const Navbar = () => {
   const [active, setActive] = useState<string>("");
   const [toggle, setToggle] = useState<boolean>(false);
 
-  document.addEventListener("click", (e: any) => {
-    const nav = document.querySelector("nav") as HTMLElement;
-    if (!nav.contains(e.target)) {
-      setToggle(!toggle)
-    }
-  });
+  useEffect(() => {
+    document.addEventListener("click", (e: any) => {
+      const nav = document.querySelector("nav") as HTMLElement;
+      if (!nav.contains(e.target)) {
+        setToggle(!toggle);
+      }
+    });
+  }, []);
 
   return (
     <nav className={`${styles.paddingX} w-full flex items-center py-7 fixed top-0 z-20 bg-primary`}>
