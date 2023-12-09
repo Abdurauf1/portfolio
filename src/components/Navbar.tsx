@@ -7,7 +7,31 @@ const Navbar = () => {
   const [active, setActive] = useState<string>("");
   const [toggle, setToggle] = useState<boolean>(false);
 
+  const handleScroll = () => {
+    const sections = document.querySelectorAll("section") as NodeListOf<HTMLElement>;
+    const navLinks = document.querySelectorAll(".nav-links") as NodeListOf<HTMLLIElement>;
+    const navWrapper = document.querySelector("nav") as HTMLElement;
+
+    sections.forEach(section => {
+      const top: number = window.scrollY;
+      const offset: number = section.offsetTop - navWrapper.clientHeight;
+      const height: number = section.offsetHeight;
+      const id: string | null = section.getAttribute("id");
+
+      if (top >= offset && top < offset + height) {
+        navLinks.forEach((navLink: any) => {
+          navLink.classList.remove("text-white");
+          document
+            .querySelector("header nav ul li a[href*=" + id + "]")
+            ?.classList.add("text-white");
+        });
+      }
+    });
+  };
+
   useEffect(() => {
+    handleScroll();
+
     document.addEventListener("click", (e: any) => {
       const nav = document.querySelector("nav") as HTMLElement;
       if (!nav.contains(e.target)) {
@@ -35,7 +59,7 @@ const Navbar = () => {
               key={link.id}
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] cursor-pointer font-medium`}
+              } hover:text-white text-[18px] cursor-pointer font-medium nav-links`}
               onClick={() => setActive(link.title)}
             >
               <a href={`#${link.id}`}>{link.title}</a>
