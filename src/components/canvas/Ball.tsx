@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { CanvasLoader } from "..";
 
-const Ball = (props: any) => {
+const Ball = (props: { imgUrl: string }) => {
   const [decal] = useTexture([props.imgUrl]);
 
   return (
@@ -19,7 +19,7 @@ const Ball = (props: any) => {
   );
 };
 
-const BallCanvas = ({ icon }: any) => {
+const BallCanvas = ({ icon }: { icon: string }) => {
   return (
     <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<CanvasLoader />}>

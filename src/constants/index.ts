@@ -1,5 +1,4 @@
 import {
-    mysql,
     sass,
     itransition,
     npm,
@@ -9,7 +8,6 @@ import {
     git,
     html,
     javascript,
-    nodejs,
     reactjs,
     tailwind,
     typescript,
@@ -70,16 +68,8 @@ const technologies = [
         icon: tailwind,
     },
     {
-        name: "Node JS",
-        icon: nodejs,
-    },
-    {
         name: "git",
         icon: git,
-    },
-    {
-        name: "MySql",
-        icon: mysql,
     },
     {
         name: "Bootsrap",

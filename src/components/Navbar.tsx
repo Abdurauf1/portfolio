@@ -7,37 +7,15 @@ const Navbar = () => {
   const [active, setActive] = useState<string>("");
   const [toggle, setToggle] = useState<boolean>(false);
 
-  const handleScroll = () => {
-    const sections = document.querySelectorAll("section") as NodeListOf<HTMLElement>;
-    const navLinks = document.querySelectorAll(".nav-links") as NodeListOf<HTMLLIElement>;
-    const navWrapper = document.querySelector("nav") as HTMLElement;
-
-    sections.forEach(section => {
-      const top: number = window.scrollY;
-      const offset: number = section.offsetTop - navWrapper.clientHeight;
-      const height: number = section.offsetHeight;
-      const id: string | null = section.getAttribute("id");
-
-      if (top >= offset && top < offset + height) {
-        navLinks.forEach((navLink: any) => {
-          navLink.classList.remove("text-white");
-          document
-            .querySelector("header nav ul li a[href*=" + id + "]")
-            ?.classList.add("text-white");
-        });
-      }
-    });
+  const clickHandler = (e: MouseEvent) => {
+    const nav = document.querySelector("nav") as HTMLElement;
+    if (!nav.contains(e.target as Node)) {
+      setToggle(false);
+    }
   };
 
   useEffect(() => {
-    handleScroll();
-
-    document.addEventListener("click", (e: any) => {
-      const nav = document.querySelector("nav") as HTMLElement;
-      if (!nav.contains(e.target)) {
-        setToggle(false);
-      }
-    });
+    document.addEventListener("click", clickHandler);
   }, []);
 
   return (
