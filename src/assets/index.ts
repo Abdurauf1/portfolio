@@ -18,8 +18,10 @@ import todoApp from "./images/projects/todo_app.png"
 import lumiaClone from "./images/projects/lumia_website.png"
 import registerLogin from "./images/projects/register_login.png"
 import library from "./images/projects/library.png"
+import watchShop from "./images/projects/watch_shop.png"
 
 export {
+  watchShop,
   library,
   registerLogin,
   lumiaClone,
