@@ -14,9 +14,9 @@ import {
     colorFlipper,
     portfolioRS,
     todoApp,
-    // library,
-    // lumiaClone,
-    // registerLogin,
+    library,
+    lumiaClone,
+    registerLogin,
     // watchShop,
 } from "../assets"
 
@@ -172,80 +172,80 @@ const projects = [
         image: colorFlipper,
         source_code_link: "https://github.com/Abdurauf1/color-flipper",
     },
-    // {
-    //     name: "Lumia website clone",
-    //     deploy: "https://abdurauf1.github.io/lumia-clone/",
-    //     description:
-    //         "Lumia landing page clone with html, css, bootstrap and typescript",
-    //     tags: [
-    //         {
-    //             name: "html",
-    //             color: "pink-text-gradient",
-    //         },
-    //         {
-    //             name: "css",
-    //             color: "green-text-gradient",
-    //         },
-    //         {
-    //             name: "bootstrap",
-    //             color: "pink-text-gradient",
-    //         },
-    //         {
-    //             name: "typescript",
-    //             color: "blue-text-gradient",
-    //         },
-    //     ],
-    //     image: lumiaClone,
-    //     source_code_link: "https://github.com/Abdurauf1/lumia-clone",
-    // },
-    // {
-    //     name: "User management webapp",
-    //     deploy: "https://user-management-abdurauf1.netlify.app",
-    //     description:
-    //         "User management fullstack webapp. You can see, delete and block registered users",
-    //     tags: [
-    //         {
-    //             name: "react",
-    //             color: "pink-text-gradient",
-    //         },
-    //         {
-    //             name: "react-bootstrap",
-    //             color: "blue-text-gradient",
-    //         },
-    //         {
-    //             name: "nodejs",
-    //             color: "green-text-gradient",
-    //         },
-    //         {
-    //             name: "mongodb",
-    //             color: "blue-text-gradient",
-    //         },
-    //     ],
-    //     image: registerLogin,
-    //     source_code_link: "https://github.com/Abdurauf1/registration-login",
-    // },
-    // {
-    //     name: "Brooklyn Public Library",
-    //     deploy: "https://rolling-scopes-school.github.io/abdurauf1-JSFEPRESCHOOL2023Q2/library/",
-    //     description:
-    //         "Landing page about brooklyn public library",
-    //     tags: [
-    //         {
-    //             name: "html",
-    //             color: "green-text-gradient",
-    //         },
-    //         {
-    //             name: "scss",
-    //             color: "pink-text-gradient",
-    //         },
-    //         {
-    //             name: "javascript",
-    //             color: "blue-text-gradient",
-    //         },
-    //     ],
-    //     image: library,
-    //     source_code_link: "#",
-    // },
+    {
+        name: "Lumia website clone",
+        deploy: "https://abdurauf1.github.io/lumia-clone/",
+        description:
+            "Lumia landing page clone with html, css, bootstrap and typescript",
+        tags: [
+            {
+                name: "html",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "css",
+                color: "green-text-gradient",
+            },
+            {
+                name: "bootstrap",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "typescript",
+                color: "blue-text-gradient",
+            },
+        ],
+        image: lumiaClone,
+        source_code_link: "https://github.com/Abdurauf1/lumia-clone",
+    },
+    {
+        name: "User management webapp",
+        deploy: "https://user-management-abdurauf1.netlify.app",
+        description:
+            "User management fullstack webapp. You can see, delete and block registered users",
+        tags: [
+            {
+                name: "react",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "react-bootstrap",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "nodejs",
+                color: "green-text-gradient",
+            },
+            {
+                name: "mongodb",
+                color: "blue-text-gradient",
+            },
+        ],
+        image: registerLogin,
+        source_code_link: "https://github.com/Abdurauf1/registration-login",
+    },
+    {
+        name: "Brooklyn Public Library",
+        deploy: "https://rolling-scopes-school.github.io/abdurauf1-JSFEPRESCHOOL2023Q2/library/",
+        description:
+            "Landing page about brooklyn public library",
+        tags: [
+            {
+                name: "html",
+                color: "green-text-gradient",
+            },
+            {
+                name: "scss",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "javascript",
+                color: "blue-text-gradient",
+            },
+        ],
+        image: library,
+        source_code_link: "#",
+    },
 ]
 
 export { technologies, experiences, projects }
