@@ -246,24 +246,6 @@ const projects = [
     //     image: library,
     //     source_code_link: "#",
     // },
-    // {
-    //     name: "Watch Shop",
-    //     deploy: "https://watch-shop-abdurauf1.netlify.app/",
-    //     description:
-    //         "Online store",
-    //     tags: [
-    //         {
-    //             name: "react",
-    //             color: "blue-text-gradient",
-    //         },
-    //         {
-    //             name: "scss",
-    //             color: "pink-text-gradient",
-    //         },
-    //     ],
-    //     image: watchShop,
-    //     source_code_link: "https://github.com/Abdurauf1/watch-shop",
-    // },
 ]
 
 export { technologies, experiences, projects }
