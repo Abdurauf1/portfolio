@@ -13,6 +13,10 @@
   color-scheme: dark;
 }
 
+.bg-hero-pattern {
+  background-image: url("./assets/images/herobg.png");
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
