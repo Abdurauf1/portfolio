@@ -114,15 +114,15 @@ const projects = [
             },
             {
                 name: "css",
-                color: "green-text-gradient",
+                color: "blue-text-gradient",
             },
             {
                 name: "bootstrap",
                 color: "pink-text-gradient",
             },
             {
-                name: "typescript",
-                color: "blue-text-gradient",
+                name: "javascript",
+                color: "green-text-gradient",
             },
         ],
         image: lumiaClone,
