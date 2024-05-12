@@ -1,4 +1,4 @@
-import { About, Hero, Navbar, Experience, Projects, Contact } from "./components";
+import { About, Hero, Navbar, Projects, Contact } from "./components";
 import { StarsCanvas } from "./components/canvas";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
           <Hero />
         </div>
         <About />
-        <Experience />
+        {/* <Experience /> */}
         <Projects />
         <div className="relative z-0">
           <Contact />

@@ -201,7 +201,7 @@ const projects = [
         source_code_link: "https://github.com/Abdurauf1/rsschool-cv",
     },
     {
-        name: "Color Flipper",
+        name: "Random Color Generator",
         deploy: "https://abdurauf1.github.io/color-flipper/",
         description:
             "Website that you can change colors randomly and, simple colors and hex colors.",
