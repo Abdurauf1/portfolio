@@ -1,3 +1,4 @@
+import { myImg } from "../assets";
 import { styles } from "../styles";
 import { motion } from "framer-motion";
 
@@ -20,6 +21,11 @@ const Hero = () => {
             I develop websites, user <br className="sm:block hidden" /> interfaces and web
             applications.
           </p>
+        </div>
+        <div className="w-[300px] h-[300px] rounded-full ml-10 mt-10 relative before:content-[''] before:w-full before:h-full before:absolute before:rounded-full before:bg-[#915eff] before:-translate-x-4 before:-translate-y-4">
+          <div className="w-full h-full rounded-full overflow-hidden relative z-10">
+            <img className="w-full" src={myImg} alt="my-img" />
+          </div>
         </div>
       </div>
 
