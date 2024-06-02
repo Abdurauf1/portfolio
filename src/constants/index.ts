@@ -1,6 +1,5 @@
 import {
     sass,
-    itransition,
     npm,
     bootstrap,
     github,
@@ -22,10 +21,6 @@ export const navLinks = [
     {
         id: "about",
         title: "About",
-    },
-    {
-        id: "work",
-        title: "Work",
     },
     {
         id: "projects",
@@ -83,21 +78,6 @@ const technologies = [
         icon: github,
     },
 ];
-
-const experiences = [
-    {
-        title: "React.js Developer",
-        company_name: "Itransition",
-        icon: itransition,
-        iconBg: "#ffffff",
-        date: "Jan 2023 - Feb 2023",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Using backend technologies such as Node.js and MySql for backend tasks",
-        ],
-    },
-]
 
 const projects = [
     {
@@ -224,4 +204,4 @@ const projects = [
     },
 ]
 
-export { technologies, experiences, projects }
+export { technologies, projects }

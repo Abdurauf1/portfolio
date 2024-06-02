@@ -11,7 +11,6 @@ import reactjs from "./images/skills/reactjs.png";
 import sass from "./images/skills/sass.png";
 import tailwind from "./images/skills/tailwind.png";
 import typescript from "./images/skills/typescript.png";
-import itransition from "./images/company/itransition.png"
 import colorFlipper from "./images/projects/color_flipper.png"
 import portfolioRS from "./images/projects/portfolio_rs.png"
 import todoApp from "./images/projects/todo_app.png"
@@ -29,7 +28,6 @@ export {
   github,
   menu,
   close,
-  itransition,
   css,
   git,
   html,

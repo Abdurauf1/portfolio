@@ -10,7 +10,6 @@ function App() {
           <Hero />
         </div>
         <About />
-        {/* <Experience /> */}
         <Projects />
         <div className="relative z-0">
           <Contact />
