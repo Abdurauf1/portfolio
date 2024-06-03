@@ -16,10 +16,8 @@ import portfolioRS from "./images/projects/portfolio_rs.png"
 import todoApp from "./images/projects/todo_app.png"
 import lumiaClone from "./images/projects/lumia_website.png"
 import registerLogin from "./images/projects/register_login.png"
-import myImg from "./images/me.jpg"
 
 export {
-  myImg,
   registerLogin,
   lumiaClone,
   todoApp,

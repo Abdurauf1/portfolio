@@ -1,4 +1,3 @@
-import { myImg } from "../assets";
 import { styles } from "../styles";
 import { motion } from "framer-motion";
 
@@ -6,7 +5,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
-        className={`${styles.paddingX} justify-between absolute inset-0 top-[120px] max-w-7xl mx-auto flex lg:flex-row items-start flex-col gap-5`}
+        className={`${styles.paddingX} justify-between absolute inset-0 top-[120px] max-w-7xl mx-auto flex lg:flex-row flex-col`}
       >
         <div className="flex flex-row items-start gap-5">
           <div className="flex flex-col justify-center items-center mt-5">
@@ -22,11 +21,6 @@ const Hero = () => {
               I develop websites, user <br className="sm:block hidden" /> interfaces and web
               applications.
             </p>
-          </div>
-        </div>
-        <div className="mx-auto w-[280px] h-[280px] lg:mt-[70px] rounded-full relative before:content-[''] before:w-full before:h-full before:absolute before:rounded-full before:bg-[#915eff] before:-translate-x-4 before:-translate-y-4">
-          <div className="w-full h-full rounded-full overflow-hidden relative z-10">
-            <img className="w-full" src={myImg} alt="my-img" />
           </div>
         </div>
       </div>
