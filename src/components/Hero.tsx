@@ -24,7 +24,7 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <div className="mx-auto w-[280px] h-[280px] mt-[70px] rounded-full relative before:content-[''] before:w-full before:h-full before:absolute before:rounded-full before:bg-[#915eff] before:-translate-x-4 before:-translate-y-4">
+        <div className="mx-auto w-[280px] h-[280px] lg:mt-[70px] rounded-full relative before:content-[''] before:w-full before:h-full before:absolute before:rounded-full before:bg-[#915eff] before:-translate-x-4 before:-translate-y-4">
           <div className="w-full h-full rounded-full overflow-hidden relative z-10">
             <img className="w-full" src={myImg} alt="my-img" />
           </div>
