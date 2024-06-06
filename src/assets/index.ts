@@ -16,8 +16,10 @@ import portfolioRS from "./images/projects/portfolio_rs.png"
 import todoApp from "./images/projects/todo_app.png"
 import lumiaClone from "./images/projects/lumia_website.png"
 import registerLogin from "./images/projects/register_login.png"
+import weatherApp from "./images/projects/weather_app.jpg"
 
 export {
+  weatherApp,
   registerLogin,
   lumiaClone,
   todoApp,

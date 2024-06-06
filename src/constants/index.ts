@@ -15,6 +15,7 @@ import {
     todoApp,
     lumiaClone,
     registerLogin,
+    weatherApp,
 } from "../assets"
 
 export const navLinks = [
@@ -107,30 +108,26 @@ const projects = [
         source_code_link: "https://github.com/Abdurauf1/lumia-clone",
     },
     {
-        name: "User management webapp",
-        deploy: "https://user-management-abdurauf1.netlify.app",
+        name: "Weather App",
+        deploy: "https://weather-app-abdurauf1.netlify.app/",
         description:
-            "User management fullstack webapp. You can see, delete and block registered users",
+            "Web App to get current day weather and seven days forecast. It allows to search cities and get weather from API.",
         tags: [
             {
                 name: "react",
-                color: "pink-text-gradient",
-            },
-            {
-                name: "react-bootstrap",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "nodejs",
                 color: "green-text-gradient",
             },
             {
-                name: "mongodb",
+                name: "tailwind",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "typescript",
                 color: "blue-text-gradient",
             },
         ],
-        image: registerLogin,
-        source_code_link: "https://github.com/Abdurauf1/registration-login",
+        image: weatherApp,
+        source_code_link: "https://github.com/Abdurauf1/react-weather-app/",
     },
     {
         name: "Todo App",
@@ -157,6 +154,32 @@ const projects = [
         ],
         image: todoApp,
         source_code_link: "https://github.com/Abdurauf1/todo-app",
+    },
+    {
+        name: "User management webapp",
+        deploy: "https://user-management-abdurauf1.netlify.app",
+        description:
+            "User management fullstack webapp. You can see, delete and block registered users",
+        tags: [
+            {
+                name: "react",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "react-bootstrap",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "nodejs",
+                color: "green-text-gradient",
+            },
+            {
+                name: "mongodb",
+                color: "blue-text-gradient",
+            },
+        ],
+        image: registerLogin,
+        source_code_link: "https://github.com/Abdurauf1/registration-login",
     },
     {
         name: "CV RS School",
