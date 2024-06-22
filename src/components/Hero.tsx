@@ -1,6 +1,6 @@
 import { styles } from "../styles";
 import { motion } from "framer-motion";
-import { github, instagram, telegram, linkedin } from "../assets";
+// import { github, instagram, telegram, linkedin } from "../assets";
 
 const Hero = () => {
   return (

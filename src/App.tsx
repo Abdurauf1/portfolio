@@ -5,16 +5,14 @@ function App() {
   return (
     <>
       <div className="relative z-0 bg-primary">
-        <div className="w-full bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <StarsCanvas />
+        <div className="w-full  bg-cover bg-no-repeat bg-center">
           <Navbar />
           <Hero />
         </div>
         <About />
         <Projects />
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
+        <Contact />
       </div>
     </>
   );
