@@ -1,6 +1,6 @@
 import menu from "./icons/menu.svg";
 import close from "./icons/close.svg";
-import github from "./images/github.png";
+import github from "./images/socials/github.png";
 import bootstrap from "./images/skills/bootstrap.png"
 import css from "./images/skills/css.png";
 import git from "./images/skills/git.png";
@@ -17,8 +17,14 @@ import todoApp from "./images/projects/todo_app.png"
 import lumiaClone from "./images/projects/lumia_website.png"
 import registerLogin from "./images/projects/register_login.png"
 import weatherApp from "./images/projects/weather_app.jpg"
+import telegram from "./images/socials/telegram.png"
+import linkedin from "./images/socials/linkedin.png"
+import instagram from "./images/socials/instagram.png"
 
 export {
+  telegram,
+  instagram,
+  linkedin,
   weatherApp,
   registerLogin,
   lumiaClone,

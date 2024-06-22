@@ -85,7 +85,7 @@ const projects = [
         name: "Lumia website clone",
         deploy: "https://abdurauf1.github.io/lumia-clone/",
         description:
-            "Lumia landing page clone with html, css, bootstrap and typescript",
+            "Lumia landing page clone with html, css, bootstrap and javascript",
         tags: [
             {
                 name: "html",
