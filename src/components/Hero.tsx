@@ -6,10 +6,10 @@ const Hero = () => {
   return (
     <section className="w-full">
       <div
-        className={`${styles.paddingX} max-w-7xl mx-auto flex justify-between pt-10 lg:flex-row flex-col gap-5`}
+        className={`${styles.paddingX} max-w-7xl mx-auto flex justify-between pt-5 lg:pt-10 lg:flex-row flex-col gap-5`}
       >
         <motion.div variants={textVariant()} className="w-full lg:w-1/2 lg:mb-0 mb-5">
-          <h1 className="text-3xl lg:text-4xl font-bold leading-normal mt-10">
+          <h1 className="text-3xl lg:text-4xl font-bold leading-normal lg:mt-10">
             Hey, I'm <span className="text-pink-500">Abdurauf</span> -
             <span className="block">Frontend Developer</span>
           </h1>
