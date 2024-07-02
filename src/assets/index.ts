@@ -1,6 +1,5 @@
 import menu from "./icons/menu.svg";
 import close from "./icons/close.svg";
-import github from "./images/socials/github.png";
 import bootstrap from "./images/skills/bootstrap.png"
 import css from "./images/skills/css.png";
 import git from "./images/skills/git.png";
@@ -35,7 +34,6 @@ export {
   sass,
   npm,
   bootstrap,
-  github,
   menu,
   close,
   css,

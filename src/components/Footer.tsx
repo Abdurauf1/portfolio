@@ -1,4 +1,4 @@
-import { github, instagram, telegram, linkedin } from "../assets";
+import { instagram, telegram, linkedin, github2 } from "../assets";
 import { SectionWrapper } from "../hoc";
 
 const Footer = () => {
@@ -6,7 +6,7 @@ const Footer = () => {
     <>
       <div className="flex w-full justify-end gap-4">
         <a href="https://github.com/Abdurauf1/" className="w-10">
-          <img src={github} alt="github_icon" />
+          <img src={github2} alt="github_icon" />
         </a>
         <a href="https://www.instagram.com/abdurauf_a_/" className="w-10">
           <img src={instagram} alt="instagram_icon" />
