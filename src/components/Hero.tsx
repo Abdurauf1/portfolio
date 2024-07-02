@@ -1,13 +1,11 @@
-import { styles } from "../styles";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
+import { SectionWrapper } from "../hoc";
 
 const Hero = () => {
   return (
-    <section className="w-full">
-      <div
-        className={`${styles.paddingX} max-w-7xl mx-auto flex justify-between pt-5 lg:pt-10 lg:flex-row flex-col gap-5`}
-      >
+    <>
+      <div className="flex justify-between pt-5 lg:pt-10 lg:flex-row flex-col gap-5">
         <motion.div variants={textVariant()} className="w-full lg:w-1/2 lg:mb-0 mb-5">
           <h1 className="text-3xl lg:text-4xl font-bold leading-normal lg:mt-10">
             Hey, I'm <span className="text-pink-500">Abdurauf</span> -
@@ -15,7 +13,7 @@ const Hero = () => {
           </h1>
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
-            className="mt-4 text-lg lg:text-xl text-secondary"
+            className="mt-5 text-lg lg:text-xl text-secondary"
           >
             <span className="font-bold">Crafting Engaging</span> and{" "}
             <span className="font-bold">Dynamic User Experiences</span> with Modern Frontend
@@ -111,8 +109,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
-export default Hero;
+export default SectionWrapper(Hero, "hero");
