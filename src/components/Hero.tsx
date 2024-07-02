@@ -1,4 +1,6 @@
 import { styles } from "../styles";
+import { motion } from "framer-motion";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const Hero = () => {
   return (
@@ -6,16 +8,27 @@ const Hero = () => {
       <div
         className={`${styles.paddingX} max-w-7xl mx-auto flex justify-between pt-10 lg:flex-row flex-col gap-5`}
       >
-        <div className="w-full lg:w-1/2 lg:mb-0 mb-5">
-          <h1 className="text-4xl font-bold leading-normal mt-10">
+        <motion.div variants={textVariant()} className="w-full lg:w-1/2 lg:mb-0 mb-5">
+          <h1 className="text-3xl lg:text-4xl font-bold leading-normal mt-10">
             Hey, I'm <span className="text-pink-500">Abdurauf</span> -
             <span className="block">Frontend Developer</span>
           </h1>
-          <p className="mt-4 text-xl">
-            Crafting Engaging and Dynamic User Experiences with Modern Frontend Development
-          </p>
-          <p className="mt-2 text-xl">Delivering High-Performance, User-Centric Web Applications</p>
-        </div>
+          <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className="mt-4 text-lg lg:text-xl text-secondary"
+          >
+            <span className="font-bold">Crafting Engaging</span> and{" "}
+            <span className="font-bold">Dynamic User Experiences</span> with Modern Frontend
+            Development
+          </motion.p>
+          <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className="mt-2 text-lg lg:text-xl text-secondary"
+          >
+            Delivering <span className="font-bold">High-Performance</span>,{" "}
+            <span className="font-bold">User-Centric</span> Web Applications
+          </motion.p>
+        </motion.div>
         <div className="w-full lg:w-1/2 bg-gradient-to-r from-blue-750 to-indigo-900 rounded-lg select-none border border-blue-850 relative">
           <div className="flex flex-row">
             <div className="h-[1px] bg-gradient-to-r from-transparent via-pink-500 to-violet-600 w-full"></div>
