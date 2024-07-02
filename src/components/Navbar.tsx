@@ -19,7 +19,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-7 fixed top-0 z-20 bg-primary`}>
+    <nav
+      className={`${styles.paddingX} w-full flex items-center py-7 sticky top-0 z-20 bg-primary`}
+    >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <a
           href="/"
@@ -29,7 +31,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          Abdurauf
+          Abdurauf.dev
         </a>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map(link => (

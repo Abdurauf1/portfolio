@@ -1,65 +1,102 @@
 import { styles } from "../styles";
-import { motion } from "framer-motion";
-// import { github, instagram, telegram, linkedin } from "../assets";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="w-full">
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
+        className={`${styles.paddingX} max-w-7xl mx-auto flex justify-between pt-10 lg:flex-row flex-col gap-5`}
       >
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#915eff]"></div>
-          <div className="w-1 sm:h-80 h-40 violet-gradient"></div>
-        </div>
-
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915eff]">Abdurauf</span>
+        <div className="w-full lg:w-1/2 lg:mb-0 mb-5">
+          <h1 className="text-4xl font-bold leading-normal mt-10">
+            Hey, I'm <span className="text-pink-500">Abdurauf</span> -
+            <span className="block">Frontend Developer</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop websites, user <br className="sm:block hidden" /> interfaces and web
-            applications.
+          <p className="mt-4 text-xl">
+            Crafting Engaging and Dynamic User Experiences with Modern Frontend Development
           </p>
+          <p className="mt-2 text-xl">Delivering High-Performance, User-Centric Web Applications</p>
         </div>
-        {/* <div>
-          <a
-            href="https://github.com/Abdurauf1/"
-            className="relative z-10 before:content-[' '] before:w-full before:h-full before:absolute before:bg-white before:-z-1 before:animate-ping before:rounded-full"
-          >
-            <img src={github} alt="github_icon" />
-          </a>
-          <a
-            href="https://www.instagram.com/abdurauf_a_/"
-            className="relative z-10 before:content-[' '] before:w-full before:h-full before:absolute before:bg-white before:-z-1 before:animate-ping before:rounded-full"
-          >
-            <img src={instagram} alt="instagram_icon" />
-          </a>
-          <a
-            href="https://t.me/aabdurauf004"
-            className="relative z-10 before:content-[' '] before:w-full before:h-full before:absolute before:bg-white before:-z-1 before:animate-ping before:rounded-full"
-          >
-            <img src={telegram} alt="telegram_icon" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/abdurauf-ashurov-656415213/"
-            className="relative z-10 before:content-[' '] before:w-full before:h-full before:absolute before:bg-white before:-z-1 before:animate-ping before:rounded-full"
-          >
-            <img src={linkedin} alt="linkedin_icon" />
-          </a>
-        </div> */}
-      </div>
-
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-            <motion.div
-              animate={{ y: [0, 24, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
-            />
+        <div className="w-full lg:w-1/2 bg-gradient-to-r from-blue-750 to-indigo-900 rounded-lg select-none border border-blue-850 relative">
+          <div className="flex flex-row">
+            <div className="h-[1px] bg-gradient-to-r from-transparent via-pink-500 to-violet-600 w-full"></div>
+            <div className="h-[1px] bg-gradient-to-r from-violet-600 to-transparent w-full"></div>
           </div>
-        </a>
+          <div className="px-8 py-5">
+            <div className="flex flex-row space-x-2">
+              <div className="cursor-pointer rounded-full w-3 h-3 bg-red-400"></div>
+              <div className="cursor-pointer rounded-full w-3 h-3 bg-orange-400"></div>
+              <div className="cursor-pointer rounded-full w-3 h-3 bg-green-200"></div>
+            </div>
+          </div>
+          <div className="px-8 py-8 border-t-[2px] border-indigo-900 overflow-hidden">
+            <code>
+              <div className="blink">
+                <span className="font-mono text-pink-500 mr-2">const</span>
+                <span className="font-mono text-white mr-2">coder</span>
+                <span className="font-mono text-pink-500 mr-2">=</span>
+                <span className="font-mono text-gray-400">{"{"}</span>
+              </div>
+              <div>
+                <span className="font-mono text-white ml-8 mr-2">name:</span>
+                <span className="font-mono text-gray-400">'</span>
+                <span className="font-mono text-amber-300">Abdurauf</span>
+                <span className="font-mono text-gray-400">',</span>
+              </div>
+              <div>
+                <span className="font-mono text-white ml-8 mr-2">skills:</span>
+                <span className="font-mono text-gray-400">['</span>
+                <span className="font-mono text-amber-300">React</span>
+                <span className="font-mono text-gray-400">', '</span>
+                <span className="font-mono text-amber-300">JavaScript</span>
+                <span className="font-mono text-gray-400">'],</span>
+              </div>
+              <div>
+                <span className="font-mono text-white ml-8 mr-2">hardWorker:</span>
+                <span className="font-mono text-orange-400">true</span>
+                <span className="font-mono text-gray-400">,</span>
+              </div>
+              <div>
+                <span className="font-mono text-white ml-8 mr-2">problemSolver:</span>
+                <span className="font-mono text-orange-400">true</span>
+                <span className="font-mono text-gray-400">,</span>
+              </div>
+              <div>
+                <span className="font-mono text-green-400 ml-8 mr-2">hireable:</span>
+                <span className="font-mono text-orange-400">function</span>
+                <span className="font-mono text-gray-400">() {"{"}</span>
+              </div>
+              <div>
+                <span className="font-mono text-orange-400 ml-16 mr-2">return</span>
+                <span className="font-mono text-gray-400">(</span>
+              </div>
+              <div>
+                <span className="font-mono text-cyan-400 ml-24">this.</span>
+                <span className="font-mono text-white mr-2">hardWorker</span>
+                <span className="font-mono text-amber-300">&amp;&amp;</span>
+              </div>
+              <div>
+                <span className="font-mono text-cyan-400 ml-24">this.</span>
+                <span className="font-mono text-white mr-2">problemSolver</span>
+                <span className="font-mono text-amber-300">&amp;&amp;</span>
+              </div>
+              <div>
+                <span className="font-mono text-cyan-400 ml-24">this.</span>
+                <span className="font-mono text-white mr-2">skills.length</span>
+                <span className="font-mono text-amber-300 mr-2">&gt;=</span>
+                <span className="font-mono text-orange-400">5</span>
+              </div>
+              <div>
+                <span className="font-mono text-gray-400 ml-16 mr-2">);</span>
+              </div>
+              <div>
+                <span className="font-mono text-gray-400 ml-8">{"}"}</span>
+              </div>
+              <div>
+                <span className="font-mono text-gray-400">{"}"}</span>
+              </div>
+            </code>
+          </div>
+        </div>
       </div>
     </section>
   );
