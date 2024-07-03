@@ -2,7 +2,6 @@ import {
     sass,
     npm,
     bootstrap,
-    github,
     css,
     git,
     html,
@@ -16,6 +15,7 @@ import {
     lumiaClone,
     registerLogin,
     weatherApp,
+    github,
 } from "../assets"
 
 export const navLinks = [

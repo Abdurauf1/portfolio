@@ -20,8 +20,10 @@ import telegram from "./images/socials/telegram.png"
 import linkedin from "./images/socials/linkedin.png"
 import instagram from "./images/socials/instagram.png"
 import github2 from "./images/github2.png"
+import github from "./images/skills/github.png"
 
 export {
+  github,
   github2,
   telegram,
   instagram,
