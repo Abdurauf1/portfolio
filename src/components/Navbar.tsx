@@ -16,6 +16,9 @@ const Navbar = () => {
 
   useEffect(() => {
     document.addEventListener("click", clickHandler);
+    return () => {
+      document.removeEventListener("click", clickHandler);
+    };
   }, []);
 
   return (
@@ -39,7 +42,7 @@ const Navbar = () => {
               key={link.id}
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] cursor-pointer font-medium nav-links`}
+              } hover:text-white text-[18px] cursor-pointer font-medium nav-links duration-300`}
               onClick={() => setActive(link.title)}
             >
               <a href={`#${link.id}`}>{link.title}</a>
@@ -56,21 +59,23 @@ const Navbar = () => {
 
           <ul
             className={`${
-              !toggle ? "h-0 hidden" : "h-auto"
-            } absolute top-[83px] left-0 list-none flex pb-2 justify-end items-start flex-col gap-4 w-full bg-primary`}
+              !toggle ? "max-h-0" : "max-h-[360px]"
+            } transition-all duration-500 overflow-hidden absolute top-[83px] left-0 list-none flex pb-2 justify-end items-start flex-col gap-4 w-full bg-primary`}
           >
             {navLinks.map(link => (
               <li
                 key={link.id}
                 className={`${active === link.title ? "text-white" : "text-secondary"} ${
                   styles.paddingX
-                } hover:text-white font-poppins font-medium cursor-pointer text-[16px] py-2`}
+                } hover:text-white font-poppins font-medium cursor-pointer text-[16px] py-2 duration-300 w-full`}
                 onClick={() => {
                   setToggle(!toggle);
                   setActive(link.title);
                 }}
               >
-                <a href={`#${link.id}`}>{link.title}</a>
+                <a className="w-full block" href={`#${link.id}`}>
+                  {link.title}
+                </a>
               </li>
             ))}
           </ul>
