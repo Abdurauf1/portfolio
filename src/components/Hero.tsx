@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn, slideIn, textVariant } from "../utils/motion";
 
 const Hero = () => {
   return (
     <>
-      <div className="flex justify-between lg:flex-row flex-col gap-5">
+      <div className="flex justify-between lg:flex-row flex-col gap-5 overflow-hidden">
         <motion.div variants={textVariant()} className="w-full lg:w-1/2 lg:mb-0 mb-5">
           <h1 className="text-3xl lg:text-4xl font-bold leading-normal lg:mt-10">
             Hey, I'm <span className="text-pink-500">Abdurauf</span> -
@@ -27,7 +27,10 @@ const Hero = () => {
             <span className="font-bold">User-Centric</span> Web Applications
           </motion.p>
         </motion.div>
-        <div className="w-full lg:w-1/2 bg-gradient-to-r from-blue-750 to-indigo-900 rounded-lg select-none border border-blue-850 relative">
+        <motion.div
+          variants={slideIn("right", "tween", 0.2, 1)}
+          className="w-full lg:w-1/2 bg-gradient-to-r from-blue-750 to-indigo-900 rounded-lg select-none border border-blue-850 relative"
+        >
           <div className="flex flex-row">
             <div className="h-[1px] bg-gradient-to-r from-transparent via-pink-500 to-violet-600 w-full"></div>
             <div className="h-[1px] bg-gradient-to-r from-violet-600 to-transparent w-full"></div>
@@ -107,7 +110,7 @@ const Hero = () => {
               </div>
             </code>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

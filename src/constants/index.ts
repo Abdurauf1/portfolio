@@ -205,7 +205,7 @@ const projects = [
     },
     {
         name: "Random Color Generator",
-        deploy: "https://abdurauf1.github.io/color-flipper/",
+        deploy: "https://abdurauf1.github.io/random-color-generator/",
         description:
             "Website that you can change colors randomly and, simple colors and hex colors.",
         tags: [
@@ -223,7 +223,7 @@ const projects = [
             },
         ],
         image: colorFlipper,
-        source_code_link: "https://github.com/Abdurauf1/color-flipper",
+        source_code_link: "https://github.com/Abdurauf1/random-color-generator",
     },
 ]
 
