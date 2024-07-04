@@ -1,5 +1,5 @@
 import { navLinks } from "../constants";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { styles } from "../styles";
 import { menu, close } from "../assets";
 
@@ -7,9 +7,10 @@ const Navbar = () => {
   const [active, setActive] = useState<string>("");
   const [toggle, setToggle] = useState<boolean>(false);
 
+  const navRef = useRef<HTMLElement>(null);
+
   const clickHandler = (e: MouseEvent) => {
-    const nav = document.querySelector("nav") as HTMLElement;
-    if (!nav.contains(e.target as Node)) {
+    if (navRef.current && !navRef.current.contains(e.target as Node)) {
       setToggle(false);
     }
   };
@@ -23,6 +24,7 @@ const Navbar = () => {
 
   return (
     <nav
+      ref={navRef}
       className={`${styles.paddingX} w-full flex items-center py-7 sticky top-0 z-20 bg-primary`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
