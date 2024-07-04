@@ -6,6 +6,8 @@ Welcome to my personal website repository!
 
 This repository contains the source code for my personal website. It showcases my portfolio, projects, and provides information about me.
 
+#### Live: https://user-management-abdurauf1.netlify.app/
+
 ### Installation
 
 To run this website locally, follow these steps:
