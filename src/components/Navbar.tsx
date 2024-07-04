@@ -57,7 +57,7 @@ const Navbar = () => {
           <ul
             className={`${
               !toggle ? "max-h-0" : "max-h-[360px]"
-            } transition-all duration-500 overflow-hidden absolute top-[83px] left-0 list-none flex pb-2 justify-end items-start flex-col gap-4 w-full bg-primary`}
+            } transition-all ease-in-out duration-500 overflow-hidden absolute top-[83px] left-0 list-none flex pb-2 justify-end items-start flex-col gap-4 w-full bg-primary`}
           >
             {navLinks.map(link => (
               <li
