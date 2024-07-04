@@ -1,7 +1,7 @@
 import { navLinks } from "../constants";
 import { useEffect, useRef, useState } from "react";
 import { styles } from "../styles";
-import { menu, close } from "../assets";
+import { Fade } from "hamburger-react";
 
 const Navbar = () => {
   const [active, setActive] = useState<string>("");
@@ -52,12 +52,7 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            className="w-[25px] h-[25px] object-contain cursor-pointer"
-            onClick={() => setToggle(!toggle)}
-            alt="menu-close-button"
-          />
+          <Fade duration={0.3} onToggle={() => setToggle(!toggle)} size={25} />
 
           <ul
             className={`${
