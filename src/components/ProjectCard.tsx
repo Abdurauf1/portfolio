@@ -49,7 +49,7 @@ const ProjectCard = ({
           <div className="flex items-center justify-between">
             <h3 className="text-white font-bold text-[24px]">{name}</h3>
             <a href={deploy} target="blank" className="hover:text-secondary">
-              Deploy
+              Live
             </a>
           </div>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>

@@ -9,18 +9,18 @@ const Navbar = () => {
 
   const navRef = useRef<HTMLElement>(null);
 
-  const clickHandler = (e: MouseEvent) => {
-    if (navRef.current && !navRef.current.contains(e.target as Node)) {
-      setToggle(false);
-    }
-  };
+  // const clickHandler = (e: MouseEvent) => {
+  //   if (navRef.current && !navRef.current.contains(e.target as Node)) {
+  //     setToggle(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    document.addEventListener("click", clickHandler);
-    return () => {
-      document.removeEventListener("click", clickHandler);
-    };
-  }, []);
+  // useEffect(() => {
+  //   document.addEventListener("click", clickHandler);
+  //   return () => {
+  //     document.removeEventListener("click", clickHandler);
+  //   };
+  // }, []);
 
   return (
     <nav
