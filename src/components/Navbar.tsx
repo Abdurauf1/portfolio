@@ -1,5 +1,5 @@
 import { navLinks } from "../constants";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { styles } from "../styles";
 import { Fade } from "hamburger-react";
 
