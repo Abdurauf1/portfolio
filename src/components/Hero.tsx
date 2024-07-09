@@ -96,7 +96,7 @@ const Hero = () => {
               <div>
                 <span className="font-mono text-cyan-400 ml-24">this.</span>
                 <span className="font-mono text-white mr-2">skills.length</span>
-                <span className="font-mono text-amber-300 mr-2">&gt;=</span>
+                <span className="font-mono text-amber-300 mr-2">&gt;</span>
                 <span className="font-mono text-orange-400">5</span>
               </div>
               <div>
