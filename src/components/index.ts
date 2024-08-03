@@ -5,6 +5,7 @@ import About from "./About"
 import Projects from "./Projects"
 import Contact from "./Contact"
 import Footer from "./Footer"
+import ScrollUpBtn from "./ScrollUpBtn"
 import ProjectCard from "./ProjectCard"
 
-export { Navbar, Hero, CanvasLoader, About, Projects, Contact, Footer, ProjectCard }
+export { Navbar, Hero, CanvasLoader, About, Projects, Contact, Footer, ProjectCard, ScrollUpBtn }

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, slideIn, textVariant } from "../utils/motion";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const Hero = () => {
   return (
@@ -28,7 +28,7 @@ const Hero = () => {
           </motion.p>
         </motion.div>
         <motion.div
-          variants={slideIn("right", "tween", 0.2, 1)}
+          variants={fadeIn("left", "spring", 0.2, 1)}
           className="w-full lg:w-1/2 bg-gradient-to-r from-blue-750 to-indigo-900 rounded-lg select-none border border-blue-850 relative"
         >
           <div className="flex flex-row">

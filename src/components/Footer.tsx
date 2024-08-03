@@ -4,7 +4,7 @@ import { SectionWrapper } from "../hoc";
 const Footer = () => {
   return (
     <>
-      <div className="flex w-full justify-end gap-4">
+      <div className="flex w-full justify-start gap-4">
         <a href="https://github.com/Abdurauf1/" className="w-10">
           <img src={github2} alt="github_icon" />
         </a>
