@@ -9,7 +9,7 @@ import sass from "./images/skills/sass.png";
 import tailwind from "./images/skills/tailwind.png";
 import typescript from "./images/skills/typescript.png";
 import colorFlipper from "./images/projects/color_flipper.png"
-import portfolioRS from "./images/projects/portfolio_rs.png"
+import portfolioRS from "./images/projects/portfolio_rs.jpg"
 import todoApp from "./images/projects/todo_app.png"
 import lumiaClone from "./images/projects/lumia_website.png"
 import registerLogin from "./images/projects/register_login.png"

@@ -7,12 +7,21 @@ const Navbar = () => {
   const [active, setActive] = useState<string | null>("");
   const [toggle, setToggle] = useState<boolean>(false);
 
-  const navRef = useRef<HTMLElement>(null);
+  const navRef = useRef<HTMLElement | null>(null);
+  const navLinksRef = useRef<(HTMLLIElement | null)[]>([]);
 
   const clickHandler = (e: MouseEvent) => {
     if (navRef.current && !navRef.current.contains(e.target as Node)) {
       setToggle(false);
     }
+  };
+
+  const scrollToSection = () => {
+    console.log(
+      navLinksRef.current.map(element => {
+        return element?.ELEMENT_NODE;
+      })
+    );
   };
 
   useEffect(() => {
@@ -42,16 +51,21 @@ const Navbar = () => {
           {navLinks.map((link, index) => (
             <li
               key={index}
+              ref={el => (navLinksRef.current[index] = el)}
               className={`${
                 active === link.id ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] cursor-pointer font-medium nav-links duration-300`}
-              onClick={() => setActive(link.id)}
+              onClick={() => {
+                scrollToSection();
+                setActive(link.id);
+              }}
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
         </ul>
 
+        {/* small size */}
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <Fade duration={0.3} toggled={toggle} toggle={setToggle} size={25} />
 
