@@ -16,6 +16,7 @@ import {
     registerLogin,
     weatherApp,
     github,
+    iMovies,
 } from "../assets"
 
 export const navLinks = [
@@ -81,6 +82,32 @@ const technologies = [
 ];
 
 const projects = [
+    {
+        name: "iMovies",
+        deploy: "https://imovies-omega.vercel.app/",
+        description:
+            "Movie app built with React & TS which allows users to search and view the trailer of both movies and TV series",
+        tags: [
+            {
+                name: "react",
+                color: "green-text-gradient",
+            },
+            {
+                name: "tailwind",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "typescript",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "rtk",
+                color: "green-text-gradient",
+            },
+        ],
+        image: iMovies,
+        source_code_link: "https://github.com/Abdurauf1/iMovies",
+    },
     {
         name: "Lumia website clone",
         deploy: "https://abdurauf1.github.io/lumia-clone/",
