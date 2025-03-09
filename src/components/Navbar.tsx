@@ -15,9 +15,9 @@ const Navbar = () => {
     }
   };
 
-  const goToSection = (e: MouseEvent) => {
-    
-  };
+  // const goToSection = (e: MouseEvent) => {
+
+  // };
 
   const scrollToSection = () => {
     const sections = document.querySelectorAll("section");
@@ -71,9 +71,8 @@ const Navbar = () => {
           {navLinks.map((link, index) => (
             <li
               key={index}
-              className={`${
-                active === link.id ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] cursor-pointer font-medium nav-links duration-300 li`}
+              className={`${active === link.id ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] cursor-pointer font-medium nav-links duration-300 li`}
               onClick={() => {
                 scrollToSection();
                 setActive(link.id);
@@ -89,16 +88,14 @@ const Navbar = () => {
           <Fade duration={0.3} toggled={toggle} toggle={setToggle} size={25} />
 
           <ul
-            className={`${
-              !toggle ? "max-h-0" : "max-h-[360px]"
-            } transition-all ease-in-out duration-500 overflow-hidden absolute top-[83px] left-0 list-none flex pb-2 justify-end items-start flex-col gap-4 w-full bg-primary`}
+            className={`${!toggle ? "max-h-0" : "max-h-[360px]"
+              } transition-all ease-in-out duration-500 overflow-hidden absolute top-[83px] left-0 list-none flex pb-2 justify-end items-start flex-col gap-4 w-full bg-primary`}
           >
             {navLinks.map((link, index) => (
               <li
                 key={index}
-                className={`${active === link.id ? "text-white" : "text-secondary"} ${
-                  styles.paddingX
-                } hover:text-white font-poppins font-medium cursor-pointer text-[16px] py-2 duration-300 w-full`}
+                className={`${active === link.id ? "text-white" : "text-secondary"} ${styles.paddingX
+                  } hover:text-white font-poppins font-medium cursor-pointer text-[16px] py-2 duration-300 w-full`}
                 onClick={() => {
                   setToggle(!toggle);
                   setActive(link.id);
