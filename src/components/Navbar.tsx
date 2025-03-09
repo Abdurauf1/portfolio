@@ -15,37 +15,8 @@ const Navbar = () => {
     }
   };
 
-  // const goToSection = (e: MouseEvent) => {
-
-  // };
-
-  const scrollToSection = () => {
-    const sections = document.querySelectorAll("section");
-    sections.forEach(section => {
-      const top: number = window.scrollY;
-      if (navRef.current) {
-        const offset = section.offsetTop - navRef.current.clientHeight;
-        const height = section.offsetHeight;
-        const id = section.getAttribute("id");
-
-        if (top >= offset && top < offset + height) {
-          const navLinkElements = document.querySelectorAll("nav ul li a");
-
-          navLinkElements.forEach(navLink => {
-            setActive("");
-            navLink.classList.remove("text-white");
-            document
-              .querySelector("nav div ul li a[href*=" + id + "]")
-              ?.classList.add("text-white");
-          });
-        }
-      }
-    });
-  };
-
   useEffect(() => {
     document.addEventListener("click", clickHandler);
-    document.addEventListener("scroll", scrollToSection);
     return () => {
       document.removeEventListener("click", clickHandler);
     };
@@ -74,7 +45,6 @@ const Navbar = () => {
               className={`${active === link.id ? "text-white" : "text-secondary"
                 } hover:text-white text-[18px] cursor-pointer font-medium nav-links duration-300 li`}
               onClick={() => {
-                scrollToSection();
                 setActive(link.id);
               }}
             >
