@@ -17,6 +17,7 @@ import {
     weatherApp,
     github,
     iMovies,
+    lofi,
 } from "../assets"
 
 export const navLinks = [
@@ -82,6 +83,32 @@ const technologies = [
 ];
 
 const projects = [
+    {
+        name: "Lofi",
+        deploy: "https://lofi-five-sigma.vercel.app/",
+        description:
+            "Lofi website has background music, rain and other sounds. It provides todo list and pomodoro timer",
+        tags: [
+            {
+                name: "react",
+                color: "green-text-gradient",
+            },
+            {
+                name: "tailwind",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "typescript",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "rtk",
+                color: "green-text-gradient",
+            },
+        ],
+        image: lofi,
+        source_code_link: "https://github.com/Abdurauf1/lofi",
+    },
     {
         name: "iMovies",
         deploy: "https://imovies-omega.vercel.app/",

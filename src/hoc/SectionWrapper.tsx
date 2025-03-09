@@ -14,9 +14,6 @@ const SectionWrapper = (Component: FC, sectionId: string) =>
         variants={staggerContainer()}
         className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
       >
-        <span className="hash-span" id={sectionId}>
-          &nbsp;
-        </span>
         <Component />
       </motion.section>
     );
