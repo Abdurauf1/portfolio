@@ -16,8 +16,8 @@ import {
     registerLogin,
     weatherApp,
     github,
-    iMovies,
-    lofi,
+    // iMovies,
+    // lofi,
 } from "../assets"
 
 export const navLinks = [
