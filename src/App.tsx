@@ -9,10 +9,10 @@ function App() {
       <Hero />
       <About />
       <Projects />
-      <div className="relative z-0">
+      <section id="contact" className="relative z-0">
         <Contact />
         <StarsCanvas />
-      </div>
+      </section>
       <Footer />
     </div>
   );

@@ -1,5 +1,5 @@
-import { navLinks } from "../constants";
 import { useEffect, useRef, useState } from "react";
+import { navLinks } from "../constants";
 import { styles } from "../styles";
 import { Fade } from "hamburger-react";
 import { IoMoon } from "react-icons/io5";
@@ -17,10 +17,41 @@ const Navbar = () => {
     }
   };
 
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id)
+    const navHeight = navRef.current?.clientHeight ?? 0;
+
+    let position = (section?.offsetTop ?? 0) - navHeight
+
+    window.scrollTo({
+      top: position,
+      left: 0,
+      behavior: "smooth"
+    })
+  }
+
+  const activeOnScroll = () => {
+    const top = window.scrollY;
+    const navHeight = navRef.current?.clientHeight ?? 0;
+    const sections = document.querySelectorAll("section")
+
+    sections.forEach(section => {
+      const offset = section.offsetTop - navHeight
+      const sectionHeight = section.offsetHeight;
+      const id = section.getAttribute("id")
+
+      if (top >= offset && top < offset + sectionHeight) {
+        setActive(id)
+      }
+    })
+  }
+
   useEffect(() => {
+    document.addEventListener("scroll", activeOnScroll)
     document.addEventListener("click", clickHandler);
     return () => {
       document.removeEventListener("click", clickHandler);
+      document.removeEventListener("scroll", activeOnScroll)
     };
   }, []);
 
@@ -45,10 +76,11 @@ const Navbar = () => {
             {navLinks.map((link, index) => (
               <li
                 key={index}
-                className={`${active === link.id ? "text-white" : "text-secondary"
-                  } hover:text-white text-[18px] cursor-pointer font-medium nav-link duration-300 li`}
-                onClick={() => {
+                className={`${active === link.id ? "text-white" : "text-secondary"} hover:text-white text-[18px] cursor-pointer font-medium nav-link duration-300 li`}
+                onClick={(e) => {
+                  e.preventDefault()
                   setActive(link.id)
+                  scrollToSection(link.id)
                 }}
               >
                 <a href={`#${link.id}`}>{link.title}</a>
@@ -75,9 +107,11 @@ const Navbar = () => {
                 key={index}
                 className={`${active === link.id ? "text-white" : "text-secondary"} ${styles.paddingX
                   } hover:text-white font-poppins font-medium cursor-pointer text-[16px] py-2 duration-300 w-full`}
-                onClick={() => {
+                onClick={(e) => {
+                  e.preventDefault()
                   setToggle(!toggle);
                   setActive(link.id);
+                  scrollToSection(link.id)
                 }}
               >
                 <a className="w-full block" href={`#${link.id}`}>
