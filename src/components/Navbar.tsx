@@ -2,6 +2,8 @@ import { navLinks } from "../constants";
 import { useEffect, useRef, useState } from "react";
 import { styles } from "../styles";
 import { Fade } from "hamburger-react";
+import { IoMoon } from "react-icons/io5";
+import { IoLanguageSharp } from "react-icons/io5";
 
 const Navbar = () => {
   const [active, setActive] = useState<string | null>("");
@@ -38,20 +40,27 @@ const Navbar = () => {
         >
           Abdurauf.dev
         </a>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link, index) => (
-            <li
-              key={index}
-              className={`${active === link.id ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] cursor-pointer font-medium nav-links duration-300 li`}
-              onClick={() => {
-                setActive(link.id);
-              }}
-            >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center gap-5">
+          <ul className="list-none hidden sm:flex flex-row gap-10">
+            {navLinks.map((link, index) => (
+              <li
+                key={index}
+                className={`${active === link.id ? "text-white" : "text-secondary"
+                  } hover:text-white text-[18px] cursor-pointer font-medium nav-link duration-300 li`}
+                onClick={() => {
+                  setActive(link.id)
+                }}
+              >
+                <a href={`#${link.id}`}>{link.title}</a>
+              </li>
+            ))}
+          </ul>
+
+          <div className="flex gap-5 text-[18px]">
+            <IoLanguageSharp className="text-secondary hover:text-white cursor-pointer duration-300" />
+            <IoMoon className="text-secondary hover:text-white cursor-pointer duration-300" />
+          </div>
+        </div>
 
         {/* small size */}
         <div className="sm:hidden flex flex-1 justify-end items-center">

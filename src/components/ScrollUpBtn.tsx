@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { up_icon } from "../assets";
+import { FaChevronUp } from "react-icons/fa";
 
 const ScrollUpBtn = () => {
   const [visible, setVisible] = useState(false);
@@ -30,11 +30,10 @@ const ScrollUpBtn = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`${
-        visible ? "opacity-1 visible" : "opacity-0 invisible"
-      } duration-500 w-10 h-10 border-[2px] rounded-sm flex justify-center items-center cursor-pointer fixed bottom-10 right-5 z-10 outline-none hover:img:bg-white`}
+      className={`${visible ? "opacity-1 visible" : "opacity-0 invisible"}
+      duration-500 w-10 h-10 border-[2px] rounded-sm flex justify-center items-center cursor-pointer fixed bottom-10 right-5 z-10 outline-none hover:bg-white group`}
     >
-      <img className="w-4" src={up_icon} alt="up_icon" />
+      <FaChevronUp className="text-lg group-hover:text-primary" />
     </button>
   );
 };
