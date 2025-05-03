@@ -88,41 +88,41 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="flex gap-5 text-[18px]">
-            <IoLanguageSharp className="text-secondary hover:text-white cursor-pointer duration-300" />
-            <IoMoon className="text-secondary hover:text-white cursor-pointer duration-300" />
+          <div className="flex gap-5 sm:text-[18px] text-[25px]">
+            <IoLanguageSharp className="text-white sm:text-secondary hover:text-white cursor-pointer duration-300" />
+            <IoMoon className="text-white sm:text-secondary hover:text-white cursor-pointer duration-300" />
+          </div>
+
+          {/* small size */}
+          <div className="sm:hidden flex flex-1 justify-end items-center">
+            <Fade duration={0.3} toggled={toggle} toggle={setToggle} size={25} />
+
+            <ul
+              className={`${!toggle ? "max-h-0" : "max-h-[360px]"
+                } transition-all ease-in-out duration-500 overflow-hidden absolute top-[83px] left-0 list-none flex pb-2 justify-end items-start flex-col gap-4 w-full bg-primary`}
+            >
+              {navLinks.map((link, index) => (
+                <li
+                  key={index}
+                  className={`${active === link.id ? "text-white" : "text-secondary"} ${styles.paddingX
+                    } hover:text-white font-poppins font-medium cursor-pointer text-[16px] py-2 duration-300 w-full`}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    setToggle(!toggle);
+                    setActive(link.id);
+                    scrollToSection(link.id)
+                  }}
+                >
+                  <a className="w-full block" href={`#${link.id}`}>
+                    {link.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-
-        {/* small size */}
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <Fade duration={0.3} toggled={toggle} toggle={setToggle} size={25} />
-
-          <ul
-            className={`${!toggle ? "max-h-0" : "max-h-[360px]"
-              } transition-all ease-in-out duration-500 overflow-hidden absolute top-[83px] left-0 list-none flex pb-2 justify-end items-start flex-col gap-4 w-full bg-primary`}
-          >
-            {navLinks.map((link, index) => (
-              <li
-                key={index}
-                className={`${active === link.id ? "text-white" : "text-secondary"} ${styles.paddingX
-                  } hover:text-white font-poppins font-medium cursor-pointer text-[16px] py-2 duration-300 w-full`}
-                onClick={(e) => {
-                  e.preventDefault()
-                  setToggle(!toggle);
-                  setActive(link.id);
-                  scrollToSection(link.id)
-                }}
-              >
-                <a className="w-full block" href={`#${link.id}`}>
-                  {link.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
-    </nav>
+    </nav >
   );
 };
 
