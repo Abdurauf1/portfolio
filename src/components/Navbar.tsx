@@ -4,10 +4,14 @@ import { styles } from "../styles";
 import { Fade } from "hamburger-react";
 import { IoMoon } from "react-icons/io5";
 import { IoLanguageSharp } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
 
 const Navbar = () => {
   const [active, setActive] = useState<string | null>("");
   const [toggle, setToggle] = useState<boolean>(false);
+  const [langModal, setLangModal] = useState<boolean>(false)
+  const { t } = useTranslation();
 
   const navRef = useRef<HTMLHeadElement | null>(null);
 
@@ -44,6 +48,10 @@ const Navbar = () => {
         setActive(id)
       }
     })
+  }
+
+  const changeLang = (lang: string) => {
+    i18n.changeLanguage(lang)
   }
 
   useEffect(() => {
@@ -83,13 +91,50 @@ const Navbar = () => {
                   scrollToSection(link.id)
                 }}
               >
-                <a href={`#${link.id}`}>{link.title}</a>
+                <a href={`#${link.id}`}>{t(link.title)}</a>
               </li>
             ))}
           </ul>
 
           <div className="flex gap-5 sm:text-[18px] text-[25px]">
-            <IoLanguageSharp className="text-white sm:text-secondary hover:text-white cursor-pointer duration-300" />
+            <div className="relative">
+              <IoLanguageSharp
+                onClick={() => {
+                  setLangModal(!langModal)
+                  setToggle(false)
+                }}
+                className="text-white sm:text-secondary hover:text-white cursor-pointer duration-300"
+              />
+              {langModal && (
+                <div
+                  className="absolute top-10 left-[50%] translate-x-[-50%] z-50 border-[1px] py-1 px-4 rounded-lg bg-primary"
+                >
+                  <ul className="flex flex-col">
+                    <li
+                      onClick={() => {
+                        changeLang("en")
+                        setLangModal(false)
+                      }}
+                      className="text-secondary hover:text-white duration-300 cursor-pointer text-[16px]"
+                    >EN</li>
+                    <li
+                      onClick={() => {
+                        changeLang("ru")
+                        setLangModal(false)
+                      }}
+                      className="text-secondary hover:text-white duration-300 cursor-pointer text-[16px]"
+                    >RU</li>
+                    <li
+                      onClick={() => {
+                        changeLang("uz")
+                        setLangModal(false)
+                      }}
+                      className="text-secondary hover:text-white duration-300 cursor-pointer text-[16px]"
+                    >UZ</li>
+                  </ul>
+                </div>
+              )}
+            </div>
             <IoMoon className="text-white sm:text-secondary hover:text-white cursor-pointer duration-300" />
           </div>
 
@@ -114,7 +159,7 @@ const Navbar = () => {
                   }}
                 >
                   <a className="w-full block" href={`#${link.id}`}>
-                    {link.title}
+                    {t(link.title)}
                   </a>
                 </li>
               ))}

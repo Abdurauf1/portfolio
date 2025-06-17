@@ -1,4 +1,19 @@
-// import i18next from "i18next";
+import i18n from "i18next";
+import HTTPBackend from "i18next-http-backend";
+import { initReactI18next } from "react-i18next";
 
-// i18next
-//   .use(Backend)
+i18n
+  .use(HTTPBackend)
+  .use(initReactI18next)
+  .init({
+    lng: "en",
+    fallbackLng: "en",
+    backend: {
+      loadPath: "locales/{{lng}}/translation.json"
+    },
+    interpolation: {
+      escapeValue: false
+    }
+  })
+
+export default i18n;

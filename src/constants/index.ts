@@ -23,15 +23,15 @@ import {
 export const navLinks = [
     {
         id: "about",
-        title: "About",
+        title: "nav.about",
     },
     {
         id: "projects",
-        title: "Projects",
+        title: "nav.projects",
     },
     {
         id: "contact",
-        title: "Contact",
+        title: "nav.contact",
     },
 ]
 
