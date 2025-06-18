@@ -52,5 +52,19 @@
         "description": "Ranglarni tasodifiy va oddiy ranglar va olti burchakli ranglarni o'zgartirishingiz mumkin bo'lgan veb-sayt."
       }
     }
+  },
+  "contact": {
+    "title": "Aloqa",
+    "subtitle": "Men bilan bog'laning",
+    "nameLabel": "Ismingiz",
+    "namePlaceholder": "Ismingiz nima?",
+    "emailLabel": "Elektron Pochtangiz",
+    "emailPlaceholder": "Elektron pochtangiz nima?",
+    "messageLabel": "Xabaringiz",
+    "messagePlaceholder": "Nima demoqchisiz?",
+    "send": "Yuborish",
+    "sending": "Yuborilmoqda...",
+    "alertMessage": "Rahmat. Men sizga imkon qadar tezroq aloqaga chiqaman.",
+    "alertError": "Nimadir xato ketdi."
   }
 }

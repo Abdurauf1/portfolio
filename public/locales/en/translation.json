@@ -52,5 +52,19 @@
         "description": "Website that you can change colors randomly and, simple colors and hex colors."
       }
     }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch",
+    "nameLabel": "Your Name",
+    "namePlaceholder": "What's your name?",
+    "emailLabel": "Your Email",
+    "emailPlaceholder": "What's your email?",
+    "messageLabel": "Your Message",
+    "messagePlaceholder": "What do you want to say?",
+    "send": "Send",
+    "sending": "Sending...",
+    "alertMessage": "Thank you. I will get back to you as soon as possible.",
+    "alertError": "Something went wrong."
   }
 }
