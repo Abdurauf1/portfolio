@@ -8,5 +8,10 @@
     "title": "Hey, I'm <pink>Abdurauf</pink> - <block>Frontend Developer</block>",
     "firstSubtitle": "<bold>Crafting Engaging</bold> and <bold>Dynamic User Experiences</bold> with Modern Frontend Development",
     "secondSubtitle": "Delivering <bold>High-Performance</bold>, <bold>User-Centric</bold> Web Applications"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Introduction",
+    "description": "I am a Frontend Developer from Tashkent, Uzbekistan, with expertise in HTML, CSS, JavaScript, and React. I thrive in both team settings and individual projects, eager to deepen my knowledge and apply my skills to real-world products. I am hardworking, conscientious, and goal-oriented."
   }
 }

@@ -8,5 +8,10 @@
     "title": "Salom, Men <pink>Abdurauf</pink> - <block>Frontend Dasturchiman</block>",
     "firstSubtitle": "Zamonaviy Frontend Dasturlash bilan <bold>Qiziqarli Saytlar</bold> va <bold>Dinamik Saytlar</bold> yaratish",
     "secondSubtitle": "<bold>Yuqori Unumli</bold>, <bold>Foydalanuvchiga yo'naltirilgan</bold> Veb-Ilovalarni yetkazib berish"
+  },
+  "about": {
+    "title": "Men haqimda",
+    "subtitle": "Kirish",
+    "description": "Men HTML, CSS, JavaScript va React bo'yicha tajribaga ega bo'lgan Toshkentdan, O'zbekistondan Frontend dasturchisiman. Men jamoada ham, individual loyihalarda ham muvaffaqiyat qozonaman, bilimlarimni chuqurlashtirishga va o‘z mahoratimni real dunyo mahsulotlariga qo‘llashga intilaman. Men mehnatsevar, vijdonli va maqsadliman."
   }
 }

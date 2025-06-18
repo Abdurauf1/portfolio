@@ -4,23 +4,23 @@ import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 import { technologies } from "../constants";
 import { BallCanvas } from "./canvas";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation()
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>About.</h2>
+        <p className={`${styles.sectionSubText}`}>{t("about.subtitle")}</p>
+        <h2 className={styles.sectionHeadText}>{t("about.title")}.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I am a Frontend Developer from Tashkent, Uzbekistan, with expertise in HTML, CSS,
-        JavaScript, and React. I thrive in both team settings and individual projects, eager to
-        deepen my knowledge and apply my skills to real-world products. I am hardworking,
-        conscientious, and goal-oriented.
+        {t("about.description")}
       </motion.p>
 
       <div className="mt-20 flex flex-row flex-wrap justify-center gap-10">
