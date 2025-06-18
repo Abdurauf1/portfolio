@@ -84,10 +84,9 @@ const technologies = [
 
 const projects = [
     {
-        name: "iMovies",
+        name: "projects.projectCards.imovies.title",
         deploy: "https://imovies-omega.vercel.app/",
-        description:
-            "Movie app built with React & TS which allows users to search and view the trailer of both movies and TV series",
+        description: "projects.projectCards.imovies.description",
         tags: [
             {
                 name: "react",
@@ -110,10 +109,9 @@ const projects = [
         source_code_link: "https://github.com/Abdurauf1/iMovies",
     },
     {
-        name: "Lofi",
+        name: "projects.projectCards.lofi.title",
         deploy: "https://lofi-five-sigma.vercel.app/",
-        description:
-            "Lofi website has background music, rain and other sounds. It provides todo list and pomodoro timer",
+        description: "projects.projectCards.lofi.description",
         tags: [
             {
                 name: "react",
@@ -136,10 +134,9 @@ const projects = [
         source_code_link: "https://github.com/Abdurauf1/lofi",
     },
     {
-        name: "Lumia website clone",
+        name: "projects.projectCards.lumia.title",
         deploy: "https://abdurauf1.github.io/lumia-clone/",
-        description:
-            "Lumia landing page clone with html, css, bootstrap and javascript",
+        description: "projects.projectCards.lumia.description",
         tags: [
             {
                 name: "html",
@@ -162,10 +159,9 @@ const projects = [
         source_code_link: "https://github.com/Abdurauf1/lumia-clone",
     },
     {
-        name: "Weather App",
+        name: "projects.projectCards.weather.title",
         deploy: "https://weather-app-abdurauf1.netlify.app/",
-        description:
-            "Web App to get current day weather and seven days forecast. It allows to search cities and get weather from API.",
+        description: "projects.projectCards.weather.description",
         tags: [
             {
                 name: "react",
@@ -184,10 +180,9 @@ const projects = [
         source_code_link: "https://github.com/Abdurauf1/react-weather-app/",
     },
     {
-        name: "Todo App",
+        name: "projects.projectCards.todo.title",
         deploy: "https://todo-app-abdurauf1.netlify.app/",
-        description:
-            "Web App created with react and typescript. It lets you add task to list, remove and edit it.",
+        description: "projects.projectCards.todo.description",
         tags: [
             {
                 name: "react",
@@ -210,10 +205,9 @@ const projects = [
         source_code_link: "https://github.com/Abdurauf1/todo-app",
     },
     {
-        name: "User management webapp",
+        name: "projects.projectCards.userManagement.title",
         deploy: "https://user-management-abdurauf1.netlify.app",
-        description:
-            "User management fullstack webapp. You can see, delete and block registered users",
+        description: "projects.projectCards.userManagement.description",
         tags: [
             {
                 name: "react",
@@ -236,10 +230,9 @@ const projects = [
         source_code_link: "https://github.com/Abdurauf1/registration-login",
     },
     {
-        name: "CV RS School",
+        name: "projects.projectCards.rsCV.title",
         deploy: "https://abdurauf1.github.io/rsschool-cv/",
-        description:
-            "Website about myself and my skills. Used html, scss and typescript. This is task from RS School.",
+        description: "projects.projectCards.rsCV.description",
         tags: [
             {
                 name: "html",
@@ -258,10 +251,9 @@ const projects = [
         source_code_link: "https://github.com/Abdurauf1/rsschool-cv",
     },
     {
-        name: "Random Color Generator",
+        name: "projects.projectCards.colorGen.title",
         deploy: "https://abdurauf1.github.io/random-color-generator/",
-        description:
-            "Website that you can change colors randomly and, simple colors and hex colors.",
+        description: "projects.projectCards.colorGen.description",
         tags: [
             {
                 name: "html",

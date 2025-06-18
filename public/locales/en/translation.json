@@ -13,5 +13,44 @@
     "title": "About",
     "subtitle": "Introduction",
     "description": "I am a Frontend Developer from Tashkent, Uzbekistan, with expertise in HTML, CSS, JavaScript, and React. I thrive in both team settings and individual projects, eager to deepen my knowledge and apply my skills to real-world products. I am hardworking, conscientious, and goal-oriented."
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "My work",
+    "description": "Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos in it. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.",
+    "projectCards": {
+      "imovies": {
+        "title": "iMovies",
+        "description": "Movie app built with React & TS which allows users to search and view the trailer of both movies and TV series."
+      },
+      "lofi": {
+        "title": "Lofi",
+        "description": "Lofi website has background music, rain and other sounds. It provides todo list and pomodoro timer."
+      },
+      "lumia": {
+        "title": "Lumia Landing Page",
+        "description": "Lumia landing page clone with html, css, bootstrap and javascript."
+      },
+      "weather": {
+        "title": "Weather App",
+        "description": "Web App to get current day weather and seven days forecast. It allows to search cities and get weather from API."
+      },
+      "todo": {
+        "title": "Todo App",
+        "description": "Web App created with react and typescript. It lets you add task to list, remove and edit it."
+      },
+      "userManagement": {
+        "title": "User management webapp",
+        "description": "User management fullstack webapp. You can see, delete and block registered users."
+      },
+      "rsCV": {
+        "title": "CV RS School",
+        "description": "Website about myself and my skills. Used html, scss and typescript. This is task from RS School."
+      },
+      "colorGen": {
+        "title": "Random Color Generator",
+        "description": "Website that you can change colors randomly and, simple colors and hex colors."
+      }
+    }
   }
 }

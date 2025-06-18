@@ -2,6 +2,7 @@ import { Tilt } from "react-tilt";
 import { github2 } from "../assets";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   index: number;
@@ -27,6 +28,8 @@ const ProjectCard = ({
   tags,
   deploy,
 }: Props) => {
+  const { t } = useTranslation()
+
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -46,8 +49,8 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <h3 className="text-white font-bold text-[24px]">{t(name)}</h3>
+          <p className="mt-2 text-secondary text-[14px]">{t(description)}</p>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
