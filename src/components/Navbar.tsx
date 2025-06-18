@@ -5,12 +5,15 @@ import { Fade } from "hamburger-react";
 import { IoMoon } from "react-icons/io5";
 import { IoLanguageSharp } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion"
 import i18n from "../i18n";
 
 const Navbar = () => {
   const [active, setActive] = useState<string | null>("");
   const [toggle, setToggle] = useState<boolean>(false);
-  const [langModal, setLangModal] = useState<boolean>(false)
+  const [langModal, setLangModal] = useState<boolean>(false);
+  const [themeModal, setThemeModal] = useState<boolean>(false)
+
   const { t } = useTranslation();
 
   const navRef = useRef<HTMLHeadElement | null>(null);
@@ -18,6 +21,8 @@ const Navbar = () => {
   const clickHandler = (e: MouseEvent) => {
     if (navRef.current && !navRef.current.contains(e.target as Node)) {
       setToggle(false);
+      setLangModal(false);
+      setThemeModal(false);
     }
   };
 
@@ -102,11 +107,15 @@ const Navbar = () => {
                 onClick={() => {
                   setLangModal(!langModal)
                   setToggle(false)
+                  setThemeModal(false)
                 }}
                 className="text-white sm:text-secondary hover:text-white cursor-pointer duration-300"
               />
               {langModal && (
-                <div
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
                   className="absolute top-10 left-[50%] translate-x-[-50%] z-50 border-[1px] py-1 px-4 rounded-lg bg-primary"
                 >
                   <ul className="flex flex-col">
@@ -116,31 +125,82 @@ const Navbar = () => {
                         setLangModal(false)
                       }}
                       className="text-secondary hover:text-white duration-300 cursor-pointer text-[16px]"
-                    >EN</li>
+                    >
+                      EN
+                    </li>
                     <li
                       onClick={() => {
                         changeLang("ru")
                         setLangModal(false)
                       }}
                       className="text-secondary hover:text-white duration-300 cursor-pointer text-[16px]"
-                    >RU</li>
+                    >
+                      RU
+                    </li>
                     <li
                       onClick={() => {
                         changeLang("uz")
                         setLangModal(false)
                       }}
                       className="text-secondary hover:text-white duration-300 cursor-pointer text-[16px]"
-                    >UZ</li>
+                    >
+                      UZ
+                    </li>
                   </ul>
-                </div>
+                </motion.div>
               )}
             </div>
-            <IoMoon className="text-white sm:text-secondary hover:text-white cursor-pointer duration-300" />
+            <div className="relative">
+              <IoMoon
+                onClick={() => {
+                  setThemeModal(!themeModal)
+                  setToggle(false)
+                  setLangModal(false)
+                }}
+                className="text-white sm:text-secondary hover:text-white cursor-pointer duration-300"
+              />
+              {themeModal && (
+                <motion.div
+                  className="absolute top-10 left-[50%] translate-x-[-50%] z-50 border-[1px] py-1 px-4 rounded-lg bg-primary"
+                >
+                  <ul className="flex flex-col">
+                    <li
+                      className="text-secondary hover:text-white duration-300 cursor-pointer text-[16px]"
+                    >
+                      Dark
+                    </li>
+                    <li
+                      className="text-secondary hover:text-white duration-300 cursor-pointer text-[16px]"
+                    >
+                      Light
+                    </li>
+                    <li
+                      className="text-secondary hover:text-white duration-300 cursor-pointer text-[16px]"
+                    >
+                      System
+                    </li>
+                  </ul>
+                </motion.div>
+              )}
+            </div>
           </div>
 
           {/* small size */}
           <div className="sm:hidden flex flex-1 justify-end items-center">
-            <Fade duration={0.3} toggled={toggle} toggle={setToggle} size={25} />
+            <Fade
+              duration={0.3}
+              toggled={toggle}
+              onToggle={toggled => {
+                if (!toggled) {
+                  setToggle(false)
+                } else {
+                  setToggle(true)
+                  setThemeModal(false)
+                  setLangModal(false)
+                }
+              }}
+              size={25}
+            />
 
             <ul
               className={`${!toggle ? "max-h-0" : "max-h-[360px]"
