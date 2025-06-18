@@ -1,30 +1,45 @@
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { Trans, useTranslation } from "react-i18next";
 
 const Hero = () => {
+  useTranslation()
+
   return (
     <>
       <div className="flex justify-between lg:flex-row flex-col gap-5 overflow-hidden">
         <motion.div variants={textVariant()} className="w-full lg:w-1/2 lg:mb-0 mb-5">
           <h1 className="text-3xl lg:text-4xl font-bold leading-normal lg:mt-10">
-            Hey, I'm <span className="text-pink-500">Abdurauf</span> -
-            <span className="block">Frontend Developer</span>
+            <Trans
+              i18nKey="hero.title"
+              components={{
+                pink: <span className="text-pink-500" />,
+                block: <span className="block" />
+              }}
+            />
           </h1>
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
             className="mt-5 text-lg lg:text-xl text-secondary"
           >
-            <span className="font-bold">Crafting Engaging</span> and{" "}
-            <span className="font-bold">Dynamic User Experiences</span> with Modern Frontend
-            Development
+            <Trans
+              i18nKey="hero.firstSubtitle"
+              components={{
+                bold: <span className="font-bold" />
+              }}
+            />
           </motion.p>
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
             className="mt-2 text-lg lg:text-xl text-secondary"
           >
-            Delivering <span className="font-bold">High-Performance</span>,{" "}
-            <span className="font-bold">User-Centric</span> Web Applications
+            <Trans
+              i18nKey="hero.secondSubtitle"
+              components={{
+                bold: <span className="font-bold" />
+              }}
+            />
           </motion.p>
         </motion.div>
         <motion.div

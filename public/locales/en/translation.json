@@ -3,5 +3,10 @@
     "about": "About",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "hero": {
+    "title": "Hey, I'm <pink>Abdurauf</pink> - <block>Frontend Developer</block>",
+    "firstSubtitle": "<bold>Crafting Engaging</bold> and <bold>Dynamic User Experiences</bold> with Modern Frontend Development",
+    "secondSubtitle": "Delivering <bold>High-Performance</bold>, <bold>User-Centric</bold> Web Applications"
   }
 }

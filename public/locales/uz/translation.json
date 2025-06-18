@@ -3,5 +3,10 @@
     "about": "Men haqimda",
     "projects": "Loyihalar",
     "contact": "Aloqa"
+  },
+  "hero": {
+    "title": "Salom, Men <pink>Abdurauf</pink> - <block>Frontend Dasturchiman</block>",
+    "firstSubtitle": "Zamonaviy Frontend Dasturlash bilan <bold>Qiziqarli Saytlar</bold> va <bold>Dinamik Saytlar</bold> yaratish",
+    "secondSubtitle": "<bold>Yuqori Unumli</bold>, <bold>Foydalanuvchiga yo'naltirilgan</bold> Veb-Ilovalarni yetkazib berish"
   }
 }
