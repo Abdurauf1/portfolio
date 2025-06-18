@@ -7,13 +7,16 @@ import { IoLanguageSharp } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence, motion } from "framer-motion"
 import i18n from "../i18n";
+import { getLang, saveLang } from "../utils/helper";
+
+const initialLang = getLang()
 
 const Navbar = () => {
   const [active, setActive] = useState<string | null>("");
   const [toggle, setToggle] = useState<boolean>(false);
   const [langModal, setLangModal] = useState<boolean>(false);
   const [themeModal, setThemeModal] = useState<boolean>(false);
-  const [activeLang, setActiveLang] = useState<string>("en")
+  const [activeLang, setActiveLang] = useState<string>(initialLang);
 
   const { t } = useTranslation();
 
@@ -58,6 +61,7 @@ const Navbar = () => {
 
   const changeLang = (lang: string) => {
     i18n.changeLanguage(lang)
+    saveLang(lang)
   }
 
   useEffect(() => {
