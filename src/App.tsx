@@ -3,7 +3,7 @@ import { StarsCanvas } from "./components/canvas";
 
 function App() {
   return (
-    <div className="bg-primary">
+    <div className="dark:bg-primary bg-primaryLight">
       <Navbar />
       <ScrollUpBtn />
       <Hero />

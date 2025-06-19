@@ -6,8 +6,9 @@ import { IoMoon } from "react-icons/io5";
 import { IoLanguageSharp } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence, motion } from "framer-motion"
-import i18n from "../i18n";
 import { getLang, saveLang } from "../utils/helper";
+import { ThemeMenu } from "./";
+import i18n from "../i18n";
 
 const initialLang = getLang()
 
@@ -76,12 +77,12 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className={`${styles.paddingX} w-full flex items-center py-7 sticky top-0 z-20 bg-primary`}
+      className={`${styles.paddingX} w-full flex items-center py-7 sticky top-0 z-20 dark:bg-primary bg-primaryLight`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <a
           href="/"
-          className="text-white text-[18px] font-bold cursor-pointer"
+          className="dark:text-white text-primaryLightText text-[18px] font-bold cursor-pointer"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
@@ -169,34 +170,10 @@ const Navbar = () => {
                 }}
                 className="text-white sm:text-secondary hover:text-white cursor-pointer duration-300"
               />
-              <AnimatePresence>
-                {themeModal && (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="absolute top-10 left-[50%] translate-x-[-50%] z-50 border-[1px] py-1 px-4 rounded-lg bg-primary"
-                  >
-                    <ul className="flex flex-col">
-                      <li
-                        className="text-secondary hover:text-white duration-300 cursor-pointer text-[16px]"
-                      >
-                        Dark
-                      </li>
-                      <li
-                        className="text-secondary hover:text-white duration-300 cursor-pointer text-[16px]"
-                      >
-                        Light
-                      </li>
-                      <li
-                        className="text-secondary hover:text-white duration-300 cursor-pointer text-[16px]"
-                      >
-                        System
-                      </li>
-                    </ul>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              <ThemeMenu
+                themeModal={themeModal}
+                setThemeModal={setThemeModal}
+              />
             </div>
           </div>
 
