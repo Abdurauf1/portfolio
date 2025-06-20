@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import { AnimatePresence, motion } from "framer-motion"
 import { getLang, saveLang } from "../utils/helper";
 import { ThemeMenu } from "./";
+import { useTheme } from "../context/themeContext";
 import i18n from "../i18n";
 
 const initialLang = getLang()
@@ -18,8 +19,10 @@ const Navbar = () => {
   const [langModal, setLangModal] = useState<boolean>(false);
   const [themeModal, setThemeModal] = useState<boolean>(false);
   const [activeLang, setActiveLang] = useState<string>(initialLang);
+  const [mobileMenuTop, setMobileMenuTop] = useState(0);
 
   const { t } = useTranslation();
+  const { theme } = useTheme()
 
   const navRef = useRef<HTMLHeadElement | null>(null);
 
@@ -35,7 +38,7 @@ const Navbar = () => {
     const section = document.getElementById(id)
     const navHeight = navRef.current?.clientHeight ?? 0;
 
-    let position = (section?.offsetTop ?? 0) - navHeight
+    let position = (section?.offsetTop ?? 0) - navHeight;
 
     window.scrollTo({
       top: position,
@@ -66,6 +69,12 @@ const Navbar = () => {
   }
 
   useEffect(() => {
+    if (navRef.current) {
+      setMobileMenuTop(navRef.current.offsetHeight);
+    }
+  }, [navRef.current, toggle]);
+
+  useEffect(() => {
     document.addEventListener("scroll", activeOnScroll)
     document.addEventListener("click", clickHandler);
     return () => {
@@ -77,25 +86,27 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className={`${styles.paddingX} w-full flex items-center py-7 sticky top-0 z-20 dark:bg-primary bg-primaryLight`}
+      className={`${styles.paddingX} shadow-lg dark:shadow-none w-full flex items-center py-5 sticky top-0 z-20 dark:bg-primary bg-primaryLight`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <a
-          href="/"
-          className="dark:text-white text-primaryLightText text-[18px] font-bold cursor-pointer"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          Abdurauf.dev
-        </a>
+        <h1>
+          <a
+            href="/"
+            className="dark:text-white text-primaryLightText text-[18px] font-bold cursor-pointer"
+            onClick={() => {
+              setActive("");
+              window.scrollTo(0, 0);
+            }}
+          >
+            Abdurauf.dev
+          </a>
+        </h1>
         <div className="flex items-center gap-5">
           <ul className="list-none hidden sm:flex flex-row gap-10">
             {navLinks.map((link, index) => (
               <li
                 key={index}
-                className={`${active === link.id ? "text-white" : "text-secondary"} hover:text-white text-[18px] cursor-pointer font-medium nav-link duration-300 li`}
+                className={`${active === link.id ? "dark:text-white text-primaryLightText" : "text-secondaryLightText dark:text-secondary"} hover:text-primaryLightText dark:hover:text-white text-[18px] cursor-pointer font-medium nav-link duration-300 li`}
                 onClick={(e) => {
                   e.preventDefault()
                   setActive(link.id)
@@ -115,7 +126,7 @@ const Navbar = () => {
                   setToggle(false)
                   setThemeModal(false)
                 }}
-                className="text-white sm:text-secondary hover:text-white cursor-pointer duration-300"
+                className="dark:text-white dark:hover:text-white hover:text-primaryLightText text-primaryLightText dark:sm:text-secondary sm:text-secondaryLightText cursor-pointer duration-300"
               />
               <AnimatePresence>
                 {langModal && (
@@ -168,7 +179,7 @@ const Navbar = () => {
                   setToggle(false)
                   setLangModal(false)
                 }}
-                className="text-white sm:text-secondary hover:text-white cursor-pointer duration-300"
+                className="dark:text-white dark:hover:text-white hover:text-primaryLightText text-primaryLightText dark:sm:text-secondary sm:text-secondaryLightText cursor-pointer duration-300"
               />
               <ThemeMenu
                 themeModal={themeModal}
@@ -192,30 +203,37 @@ const Navbar = () => {
                 }
               }}
               size={25}
+              color={theme === "Light" ? "#111827" : "white"}
             />
-
-            <ul
-              className={`${!toggle ? "max-h-0" : "max-h-[360px]"
-                } transition-all ease-in-out duration-500 overflow-hidden absolute top-[83px] left-0 list-none flex pb-2 justify-end items-start flex-col gap-4 w-full bg-primary`}
-            >
-              {navLinks.map((link, index) => (
-                <li
-                  key={index}
-                  className={`${active === link.id ? "text-white" : "text-secondary"} ${styles.paddingX
-                    } hover:text-white font-poppins font-medium cursor-pointer text-[16px] py-2 duration-300 w-full`}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    setToggle(!toggle);
-                    setActive(link.id);
-                    scrollToSection(link.id)
-                  }}
+            <AnimatePresence>
+              {toggle && (
+                <motion.ul
+                  initial={{ transform: "translateY(-100px)", opacity: 0 }}
+                  animate={{ transform: "translateY(0px)", opacity: 1 }}
+                  exit={{ transform: "translateY(-100px)", opacity: 0 }}
+                  style={{ bottom: mobileMenuTop }}
+                  className={`absolute right-0 left-0 list-none flex pb-2 justify-end items-start flex-col gap-4 w-full dark:bg-primary bg-primaryLight`}
                 >
-                  <a className="w-full block" href={`#${link.id}`}>
-                    {t(link.title)}
-                  </a>
-                </li>
-              ))}
-            </ul>
+                  {navLinks.map((link, index) => (
+                    <li
+                      key={index}
+                      className={`${active === link.id ? "text-white" : "text-secondary"} ${styles.paddingX}
+                   hover:text-white font-poppins font-medium cursor-pointer text-[16px] py-2 duration-300 w-full`}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        setToggle(!toggle);
+                        setActive(link.id);
+                        scrollToSection(link.id)
+                      }}
+                    >
+                      <a className="w-full block" href={`#${link.id}`}>
+                        {t(link.title)}
+                      </a>
+                    </li>
+                  ))}
+                </motion.ul>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>

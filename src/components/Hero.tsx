@@ -10,7 +10,7 @@ const Hero = () => {
     <>
       <div className="flex justify-between lg:flex-row flex-col gap-5 overflow-hidden">
         <motion.div variants={textVariant()} className="w-full lg:w-1/2 lg:mb-0 mb-5">
-          <h1 className="text-3xl lg:text-4xl font-bold leading-normal lg:mt-10">
+          <h2 className="text-secondaryLightText dark:text-secondary text-3xl lg:text-4xl font-bold leading-normal lg:mt-10">
             <Trans
               i18nKey="hero.title"
               components={{
@@ -18,10 +18,10 @@ const Hero = () => {
                 block: <span className="block" />
               }}
             />
-          </h1>
+          </h2>
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
-            className="mt-5 text-lg lg:text-xl text-secondary"
+            className="mt-5 text-lg lg:text-xl text-secondaryLightText dark:text-secondary"
           >
             <Trans
               i18nKey="hero.firstSubtitle"
@@ -32,7 +32,7 @@ const Hero = () => {
           </motion.p>
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
-            className="mt-2 text-lg lg:text-xl text-secondary"
+            className="mt-2 text-lg lg:text-xl text-secondaryLightText dark:text-secondary"
           >
             <Trans
               i18nKey="hero.secondSubtitle"
@@ -44,7 +44,7 @@ const Hero = () => {
         </motion.div>
         <motion.div
           variants={fadeIn("left", "spring", 0.2, 1)}
-          className="w-full lg:w-1/2 bg-gradient-to-r from-blue-750 to-indigo-900 rounded-lg select-none border border-blue-850 relative"
+          className="bg-primary w-full lg:w-1/2 bg-gradient-to-r from-blue-750 to-indigo-900 rounded-lg select-none border border-blue-850 relative"
         >
           <div className="px-8 py-5">
             <div className="flex flex-row space-x-2">
