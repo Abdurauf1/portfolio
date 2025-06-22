@@ -208,11 +208,11 @@ const Navbar = () => {
             <AnimatePresence>
               {toggle && (
                 <motion.ul
-                  initial={{ transform: "translateY(-100px)", opacity: 0 }}
+                  initial={{ transform: "translateY(-10px)", opacity: 0 }}
                   animate={{ transform: "translateY(0px)", opacity: 1 }}
-                  exit={{ transform: "translateY(-100px)", opacity: 0 }}
+                  exit={{ transform: "translateY(-10px)", opacity: 0 }}
                   style={{ top: mobileMenuTop }}
-                  className={`absolute right-0 left-0 list-none flex pb-2 justify-end items-start flex-col gap-4 w-full dark:bg-primary bg-primaryLight`}
+                  className={`shadow-lg dark:shadow-none absolute right-0 left-0 list-none flex pb-2 justify-end items-start flex-col gap-4 w-full dark:bg-primary bg-primaryLight`}
                 >
                   {navLinks.map((link, index) => (
                     <li
