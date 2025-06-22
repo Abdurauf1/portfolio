@@ -4,7 +4,7 @@ import { getTheme, saveTheme } from "../utils/helper";
 const context = React.createContext({
   theme: "",
   checkSystemTheme: () => { },
-  setTheme: (newTheme: string) => { },
+  setTheme: (_newTheme: string) => { },
 })
 
 interface Props {

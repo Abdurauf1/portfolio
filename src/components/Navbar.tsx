@@ -86,7 +86,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className={`${styles.paddingX} shadow-lg dark:shadow-none w-full flex items-center py-5 sticky top-0 z-20 dark:bg-primary bg-primaryLight`}
+      className={`${styles.paddingX} shadow-lg dark:shadow-none w-full flex items-center py-5 sticky top-0 right-0 left-0 z-20 dark:bg-primary bg-primaryLight`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <h1>
@@ -211,7 +211,7 @@ const Navbar = () => {
                   initial={{ transform: "translateY(-100px)", opacity: 0 }}
                   animate={{ transform: "translateY(0px)", opacity: 1 }}
                   exit={{ transform: "translateY(-100px)", opacity: 0 }}
-                  style={{ bottom: mobileMenuTop }}
+                  style={{ top: mobileMenuTop }}
                   className={`absolute right-0 left-0 list-none flex pb-2 justify-end items-start flex-col gap-4 w-full dark:bg-primary bg-primaryLight`}
                 >
                   {navLinks.map((link, index) => (
