@@ -9,5 +9,6 @@ import ScrollUpBtn from "./ScrollUpBtn"
 import ProjectCard from "./ProjectCard"
 import Loading from "./Loading"
 import ThemeMenu from "./ThemeMenu"
+import Code from "./Code"
 
-export { Loading, Navbar, Hero, CanvasLoader, About, Projects, Contact, Footer, ProjectCard, ScrollUpBtn, ThemeMenu }
+export { Code, Loading, Navbar, Hero, CanvasLoader, About, Projects, Contact, Footer, ProjectCard, ScrollUpBtn, ThemeMenu }

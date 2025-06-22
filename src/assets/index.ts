@@ -17,12 +17,14 @@ import weatherApp from "./images/projects/weather_app.jpg"
 import telegram from "./images/socials/telegram.png"
 import linkedin from "./images/socials/linkedin.png"
 import instagram from "./images/socials/instagram.png"
-import github2 from "./images/github2.png"
+import github2 from "./images/github2.svg"
 import github from "./images/skills/github.png"
 import iMovies from "./images/projects/imovies.png"
 import lofi from "./images/projects/lofi.png"
+import githubLight from "./images/socials/github-mark.svg"
 
 export {
+  githubLight,
   lofi,
   iMovies,
   github,

@@ -92,7 +92,7 @@ const Navbar = () => {
         <h1>
           <a
             href="/"
-            className="dark:text-white text-primaryLightText text-[18px] font-bold cursor-pointer"
+            className="dark:text-white text-primary text-[18px] font-bold cursor-pointer"
             onClick={() => {
               setActive("");
               window.scrollTo(0, 0);
@@ -106,7 +106,7 @@ const Navbar = () => {
             {navLinks.map((link, index) => (
               <li
                 key={index}
-                className={`${active === link.id ? "dark:text-white text-primaryLightText" : "text-secondaryLightText dark:text-secondary"} hover:text-primaryLightText dark:hover:text-white text-[18px] cursor-pointer font-medium nav-link duration-300 li`}
+                className={`${active === link.id ? "dark:text-white text-primary" : "text-secondaryLightText dark:text-secondary"} hover:text-primary dark:hover:text-white text-[18px] cursor-pointer font-medium nav-link duration-300 li`}
                 onClick={(e) => {
                   e.preventDefault()
                   setActive(link.id)
@@ -126,7 +126,7 @@ const Navbar = () => {
                   setToggle(false)
                   setThemeModal(false)
                 }}
-                className="dark:text-white dark:hover:text-white hover:text-primaryLightText text-primaryLightText dark:sm:text-secondary sm:text-secondaryLightText cursor-pointer duration-300"
+                className="dark:text-white dark:hover:text-white hover:text-primary text-primary dark:sm:text-secondary sm:text-secondaryLightText cursor-pointer duration-300"
               />
               <AnimatePresence>
                 {langModal && (
@@ -179,7 +179,7 @@ const Navbar = () => {
                   setToggle(false)
                   setLangModal(false)
                 }}
-                className="dark:text-white dark:hover:text-white hover:text-primaryLightText text-primaryLightText dark:sm:text-secondary sm:text-secondaryLightText cursor-pointer duration-300"
+                className="dark:text-white dark:hover:text-white hover:text-primary text-primary dark:sm:text-secondary sm:text-secondaryLightText cursor-pointer duration-300"
               />
               <ThemeMenu
                 themeModal={themeModal}

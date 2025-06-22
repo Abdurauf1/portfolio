@@ -62,10 +62,10 @@ const Contact = () => {
       <div className={`${styles.padding} max-w-7xl mx-auto relative z-0 xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden`}>
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+          className="flex-[0.75] bg-black-100 p-8 rounded-2xl shadow-lg dark:shadow-none"
         >
           <p className={`text-pink-500 ${styles.heroSubText}`}>{t("contact.subtitle")}</p>
-          <h3 className={styles.heroHeadText}>{t("contact.title")}.</h3>
+          <h3 className={`${styles.heroHeadText} !text-white`}>{t("contact.title")}.</h3>
 
           <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
             <label className="flex flex-col">

@@ -34,7 +34,7 @@ const ProjectCard = ({
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl w-full sm:w-[360px]"
+        className="shadow-lg dark:shadow-none bg-tertiary p-5 rounded-2xl w-full sm:w-[360px]"
       >
         <div className="relative w-full h-[230px]">
           <a href={deploy} target="_blank">

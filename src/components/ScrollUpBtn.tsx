@@ -31,9 +31,9 @@ const ScrollUpBtn = () => {
     <button
       onClick={scrollToTop}
       className={`${visible ? "opacity-1 visible" : "opacity-0 invisible"}
-      duration-500 w-10 h-10 border-[2px] rounded-sm flex justify-center items-center cursor-pointer fixed bottom-10 right-5 z-10 outline-none hover:bg-white group`}
+      duration-500 w-10 h-10 border-[2px] rounded-sm flex justify-center items-center cursor-pointer fixed bottom-10 right-5 z-10 outline-none dark:text-white text-primary hover:text-primary hover:bg-primary dark:border-[white] border-[#050816] dark:hover:bg-white group`}
     >
-      <FaChevronUp className="text-lg group-hover:text-primary" />
+      <FaChevronUp className="text-lg dark:group-hover:text-primary group-hover:text-white" />
     </button>
   );
 };
