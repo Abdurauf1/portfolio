@@ -30,13 +30,13 @@ const ThemeMenu = ({ themeModal, setThemeModal }: Props) => {
           <ul className="flex flex-col">
             <li
               onClick={() => changeTheme("Dark")}
-              className={`${theme === "Dark" ? "text-primary dark:text-white" : "text-secondaryLightText dark:text-secondary"} text-secondaryLightText dark:text-secondary hover:text-primary dark:hover:text-white duration-300 cursor-pointer text-[16px]`}
+              className={`${theme === "Dark" ? "text-primary dark:text-white" : "text-secondaryLightText dark:text-secondary"} dark:text-secondary hover:text-primary dark:hover:text-white duration-300 cursor-pointer text-[16px]`}
             >
               Dark
             </li>
             <li
               onClick={() => changeTheme("Light")}
-              className={`${theme === "Light" ? "text-primary dark:text-white" : "text-secondaryLightText dark:text-secondary"} text-secondaryLightText dark:text-secondary hover:text-primary dark:hover:text-white duration-300 cursor-pointer text-[16px]`}
+              className={`${theme === "Light" ? "text-primary dark:text-white" : "text-secondaryLightText dark:text-secondary"} dark:text-secondary hover:text-primary dark:hover:text-white duration-300 cursor-pointer text-[16px]`}
             >
               Light
             </li>
