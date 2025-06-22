@@ -25,7 +25,7 @@ const ThemeMenu = ({ themeModal, setThemeModal }: Props) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="absolute top-10 left-[50%] translate-x-[-50%] z-50 dark:border-[1px] py-1 px-4 rounded-lg dark:bg-primary bg-primaryLight shadow-lg dark:shadow-none"
+          className="absolute top-10 right-[50%] sm:translate-x-[10%] translate-x-[50%] z-50 dark:border-[1px] py-1 px-4 rounded-lg dark:bg-primary bg-primaryLight shadow-lg dark:shadow-none"
         >
           <ul className="flex flex-col">
             <li

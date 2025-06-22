@@ -217,8 +217,8 @@ const Navbar = () => {
                   {navLinks.map((link, index) => (
                     <li
                       key={index}
-                      className={`${active === link.id ? "text-white" : "text-secondary"} ${styles.paddingX}
-                   hover:text-white font-poppins font-medium cursor-pointer text-[16px] py-2 duration-300 w-full`}
+                      className={`${active === link.id ? "text-primary dark:text-white" : "text-secondaryLightText dark:text-secondary"} ${styles.paddingX}
+                   hover:text-primary dark:hover:text-white font-poppins font-medium cursor-pointer text-[16px] py-2 duration-300 w-full`}
                       onClick={(e) => {
                         e.preventDefault()
                         setToggle(!toggle);
