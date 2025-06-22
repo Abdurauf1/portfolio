@@ -134,7 +134,7 @@ const Navbar = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="absolute top-10 left-[50%] translate-x-[-50%] z-50 border-[1px] py-1 px-4 rounded-lg bg-primary"
+                    className="absolute top-10 left-[50%] translate-x-[-50%] z-50 dark:border-[1px] py-1 px-4 rounded-lg dark:bg-primary bg-primaryLight shadow-lg dark:shadow-none"
                   >
                     <ul className="flex flex-col">
                       <li
@@ -143,7 +143,7 @@ const Navbar = () => {
                           setLangModal(false)
                           setActiveLang("en")
                         }}
-                        className={`${activeLang === "en" ? "text-white" : "text-secondary"} hover:text-white duration-300 cursor-pointer text-[16px]`}
+                        className={`${activeLang === "en" ? "text-primary dark:text-white" : "text-secondaryLightText dark:text-secondary"} hover:text-primary dark:hover:text-white duration-300 cursor-pointer text-[16px]`}
                       >
                         EN
                       </li>
@@ -153,7 +153,7 @@ const Navbar = () => {
                           setLangModal(false)
                           setActiveLang("ru")
                         }}
-                        className={`${activeLang === "ru" ? "text-white" : "text-secondary"} hover:text-white duration-300 cursor-pointer text-[16px]`}
+                        className={`${activeLang === "ru" ? "text-primary dark:text-white" : "text-secondaryLightText dark:text-secondary"} hover:text-primary dark:hover:text-white duration-300 cursor-pointer text-[16px]`}
                       >
                         RU
                       </li>
@@ -163,7 +163,7 @@ const Navbar = () => {
                           setLangModal(false)
                           setActiveLang("uz")
                         }}
-                        className={`${activeLang === "uz" ? "text-white" : "text-secondary"} hover:text-white duration-300 cursor-pointer text-[16px]`}
+                        className={`${activeLang === "uz" ? "text-primary dark:text-white" : "text-secondaryLightText dark:text-secondary"} hover:text-primary dark:hover:text-white duration-300 cursor-pointer text-[16px]`}
                       >
                         UZ
                       </li>
