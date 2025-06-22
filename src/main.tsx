@@ -8,10 +8,10 @@ import ThemeProvider from "./context/themeContext.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <Suspense fallback={<Loading />}>
-      <ThemeProvider>
+    <ThemeProvider>
+      <Suspense fallback={<Loading />}>
         <App />
-      </ThemeProvider>
-    </Suspense>
+      </Suspense>
+    </ThemeProvider>
   </React.StrictMode>
 );
