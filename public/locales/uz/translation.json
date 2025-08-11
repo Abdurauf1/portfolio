@@ -12,12 +12,12 @@
   "about": {
     "title": "Men haqimda",
     "subtitle": "Kirish",
-    "description": "Men HTML, CSS, JavaScript va React bo'yicha tajribaga ega bo'lgan Toshkentdan, O'zbekistondan Frontend dasturchisiman. Men jamoada ham, individual loyihalarda ham muvaffaqiyat qozonaman, bilimlarimni chuqurlashtirishga va o‘z mahoratimni real dunyo mahsulotlariga qo‘llashga intilaman. Men mehnatsevar, vijdonli va maqsadliman."
+    "description": "HTML, CSS, JavaScript, TypeScript va React bo'yicha tajribaga ega Frontend Developer, O'zbekiston, Toshkent shahrida joylashgan. Jamoa hamkorligida ham, mustaqil ishda ham malakali bo'lganim uchun men yuqori sifatli, foydalanuvchiga yo'naltirilgan yechimlarni taqdim etaman. Kuchli ish axloqi va natijalarga asoslangan yondashuv bilan uzluksiz o'rganish va o'z ko'nikmalarimni ta'sirchan, real dunyo mahsulotlarida qo'llashga sodiqman."
   },
   "projects": {
     "title": "Loyihalar",
     "subtitle": "Mening ishim",
-    "description": "Quyidagi loyihalar mening ishimning haqiqiy misollari orqali mening mahorat va tajribamni namoyish etadi. Har bir loyiha kod omborlari va undagi jonli demolarga havolalar bilan qisqacha tavsiflanadi. Bu mening murakkab muammolarni hal qilish, turli texnologiyalar bilan ishlash va loyihalarni samarali boshqarish qobiliyatimni aks ettiradi.",
+    "description": "Quyidagi loyihalar mening ko'nikmalarim va tajribamni haqiqiy misollar orqali ta'kidlaydi. Har birida kod omborlari va jonli demolarga havolalar bilan birga qisqacha tavsif mavjud. Ular mening murakkab muammolarni hal qilish, turli texnologiyalar bilan ishlash va loyihalarni samarali boshqarish qobiliyatimni namoyish etadi.",
     "projectCards": {
       "imovies": {
         "title": "iMovies",
